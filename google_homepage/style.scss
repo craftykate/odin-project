@@ -43,6 +43,13 @@ form {
 			padding: 7px 8px 8px 8px;
 			margin: 2px 6px; 
 			color: lighten(black, 30%);
+			border-radius: 2px;
+			&:hover {
+				border-color: #c6c6c6;
+      	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,.15);
+      	-moz-box-shadow: 0 1px 0 rgba(0,0,0,.15);
+      	box-shadow: 0 1px 0 rgba(0,0,0,.15);
+			}
 		}
 	}
 }
@@ -58,7 +65,7 @@ form {
 	bottom: 0;
 	min-width: 980px;
 	a {
-		color: lighten(black, 30%);
+		color: lighten(black, 20%);
 		text-decoration: none;
 		&:hover {
 			text-decoration: underline;
