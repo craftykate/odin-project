@@ -6,7 +6,7 @@ Project Source: http://www.theodinproject.com/web-development-101/html-css?ref=l
 
 "DONT BE A PERFECTIONIST! You're just trying to make it look like google.com, not actually function like it and it doesn't have to be spaced exactly the same way to the pixel. Any dropdown menus or form submissions or hover-highlighting should be ignored."
 
-In other words, don't expect this to actual DO anything...
+In other words, don't expect this to actually DO anything...
 
 ## My result:
 
@@ -15,3 +15,11 @@ In other words, don't expect this to actual DO anything...
 ## What I copied:
 
 ![Google's Google](https://github.com/craftykate/odin-project/blob/master/google_homepage/img/theirs.jpg)
+
+## Conclusion
+
+Not bad, no? Their footer weight was a little bolder, but not bold enough to be called "bold". I tried different font weights, but couldn't zero in on it exactly.
+
+Clicking inside the search bar results in the same border around the search bar, and my page has the same minimum width (so it stops shrinking in at the same time theirs does.)
+
+Aside from the very slight font-weight difference in the footer I think it's pretty dead on. 
