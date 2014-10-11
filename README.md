@@ -4,5 +4,5 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 
 ## Projects
 
-- [Recreate Google's Homepage](https://github.com/craftykate/odin-project/tree/master/google_homepage)
-- [Test First Ruby](https://github.com/craftykate/odin-project/tree/master/test_first_ruby)
+- [Recreate Google's Homepage](https://github.com/craftykate/odin-project/tree/master/01_google_homepage)
+- [Test First Ruby](https://github.com/craftykate/odin-project/tree/master/02_test_first_ruby)
