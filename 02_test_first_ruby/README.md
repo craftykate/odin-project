@@ -1,3 +1,5 @@
+(Instructions below from Test First Ruby.)
+
 # Learn Ruby Test-First
 
 ## Setup
