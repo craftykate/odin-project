@@ -14,7 +14,7 @@ def bubble_sort_by(arr)
 			word = arr[i]
 			# "next_word" is the word after the current one
 			next_word = arr[i+1]
-			# If they're not in order, swap them
+			# Yield to the block. If it returns a negative number, we know the words are not in order, so we can swap them. If it returns 0 or 1 we know the words are either equal length or in order so we don't need to do anything
 			if (yield word, next_word) < 0
 				arr[i] = next_word
 				arr[i+1] = word
