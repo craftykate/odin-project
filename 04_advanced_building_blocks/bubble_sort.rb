@@ -1,13 +1,12 @@
 def bubble_sort(arr)
-	# The program only needs to run the amount of times equal to the length of the array minus one. Each round, the highest number gets put at the end. The next round, the second highest numbers gets put before the last number and so on. This means if the array contained 5 numbers we'd only have to go through the array 4 times. The also means that each round we only need to check one less amount of numbers. The first round we would check the first four numbers. The second round we would check 3 numbers etc. 
+	# Each round, the highest number gets put at the end. The next round, the second highest number gets put before the last number and so on. This means that each round we need to check one less amount of numbers. If the array had 5 numbers the first round we would check the first four numbers. The second round we would check 3 numbers etc. 
 
-	# So, the variable "round" decides both how many rounds we have left and how many numbers we need to check. 
+	# So, the variable "round" decides how many numbers we need to check. 
 	round = arr.length - 1
-	# Until we get to the last round...
-	until round == 0
+	loop do
 		# Set up our index variable
 		i = 0
-		# A little checking variable. If numbers get swapped this variable increases. We can stop the program short if we've completed a round and the checking variable is still 0. This means the array is already in order and we can stop.
+		# A little checking variable. If numbers get swapped this variable increases. We can stop the program if we've completed a round and the checking variable is still 0. This means the array is already in order and we can stop.
 		check = 0
 		# Until the number we're looking at is the second to last...
 		until i == round
