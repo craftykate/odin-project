@@ -8,50 +8,34 @@ class Mastermind
 		@evaluate = []
 		@turn = 0
 		puts "Welcome to Mastermind!"
-		puts "The computer has made a code using the numbers 1-6"
-		puts "in four spots like this:"
-		puts "\"5136\""
+		puts "The computer has made a secret code using the numbers 1-6"
+		puts "in four spots like this: \"5136\""
 		puts "Your task is to guess the order!"
+		puts "You have 12 tries to get it right."
 		puts 
 		puts "You will be told how many numbers are in the right spot"
 		puts "Like this: \"2 right\""
 		puts "And how many numbers are in the secret code, but need to be moved"
 		puts "Like this: \"1 close\""
 		puts
-		puts "So if the answer is 1231 and you enter 2136, the output will be"
+		puts "So if the secret code is 1231 and you enter 2136, the output will be"
 		puts "\"1 right, 2 close\" since the 3 is right and the 2 and 1 need to be moved" 
 		guess_again
 	end
 
 	protected
 
-	def guess_again
+	def guess_again(message = nil)
 		if @turn < 12
-			show_board
-			if @turn != 0
-				puts "You've used #{@turn} of 12 turns."
+			if message == nil
+				show_board
 			end
-			puts "Enter your guess"
+			puts 
+			puts "Enter your guess. You've used #{@turn} of 12 turns."
 			guess = gets.chomp
 			arr = []
 			guess.split("").each { |num| arr << num.to_i }
-			if sanitize_input(arr) == 1
-				@board << arr
-				@turn += 1
-				check_guess(arr)
-			elsif sanitize_input(arr) == 2
-				puts
-				puts "!!!!!!!!!!!!!!!!!!!"
-				puts "Whoops! You must enter exactly FOUR numbers like this: 3241"
-				puts "!!!!!!!!!!!!!!!!!!!"
-				guess_again
-			else
-				puts
-				puts "!!!!!!!!!!!!!!!!!!!"
-				puts "Whoops! You must enter numbers 1-6 like this: 4256"
-				puts "!!!!!!!!!!!!!!!!!!!"
-				guess_again
-			end
+			sanitize_input(arr)
 		else
 			puts "Whoops! You ran out of turns"
 			puts "The correct answer was #{@answer.join}"
@@ -60,6 +44,7 @@ class Mastermind
 
 	def show_board
 		if !@board.empty?
+			puts 
 			puts "-------------------"
 			puts "Board so far: "
 			@board.each_with_index do |guess, i| 
@@ -71,23 +56,38 @@ class Mastermind
 
 	def sanitize_input(arr)
 		checking = 0
+		message = nil
 		arr.each do |n|
 			unless (1..6).include?(n)
 				checking += 1
 			end
 		end
 		if checking == 0 && arr.length == 4
-			return 1
+			@board << arr
+			@turn += 1
+			check_guess(arr)
 		elsif checking == 0 && arr.length != 4
-			return 2
+			message = "Whoops! You must enter exactly FOUR numbers like this: 3241"
+			error(message)
+		elsif checking > 0 && arr.length == 4
+			message = "Whoops! You must enter numbers 1-6 like this: 4256"
+			error(message)
 		else
-			return 3
+			message = "Whoops! You must enter FOUR numbers and they have to be 1-6 \nlike this: 1234"
+			error(message)
 		end
+	end
+
+	def error(message)
+		puts
+		puts message
+		guess_again("err")
 	end
 
 	def check_guess(arr)
 		if arr == @answer
-			puts "you won!"
+			puts "Congrats, you won!"
+			puts "You guessed the code of #{@answer.join} in #{@turn} turns!"
 		else
 			evaluate_guess
 		end
