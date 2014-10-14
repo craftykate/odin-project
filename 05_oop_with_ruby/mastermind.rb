@@ -37,6 +37,7 @@ class Mastermind
 			guess.split("").each { |num| arr << num.to_i }
 			sanitize_input(arr)
 		else
+			puts 
 			puts "Whoops! You ran out of turns"
 			puts "The correct answer was #{@answer.join}"
 		end
@@ -108,11 +109,13 @@ class Mastermind
 			end
 		end
 		temp_answer.each_with_index do |num, i|
+			next_num = 0
 			4.times do |x|
-				if temp_guess[x] == num
+				if temp_guess[x] == num && next_num == 0
 					almost_guesses += 1
 					temp_guess[x] = 9
 					temp_answer[i] = 8
+					next_num = 1
 				end
 			end
 		end
