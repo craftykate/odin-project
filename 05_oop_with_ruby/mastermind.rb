@@ -12,6 +12,14 @@ class Mastermind
 		puts "in four spots like this:"
 		puts "\"5136\""
 		puts "Your task is to guess the order!"
+		puts 
+		puts "You will be told how many numbers are in the right spot"
+		puts "Like this: \"2 right\""
+		puts "And how many numbers are in the secret code, but need to be moved"
+		puts "Like this: \"1 close\""
+		puts
+		puts "So if the answer is 1231 and you enter 2136, the output will be"
+		puts "\"1 right, 2 close\" since the 3 is right and the 2 and 1 need to be moved" 
 		guess_again
 	end
 
