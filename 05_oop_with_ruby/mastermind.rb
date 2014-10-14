@@ -32,14 +32,16 @@ class Mastermind
 				@turn += 1
 				check_guess(arr)
 			elsif sanitize_input(arr) == 2
-				puts "!!!!"
+				puts
+				puts "!!!!!!!!!!!!!!!!!!!"
 				puts "Whoops! You must enter exactly FOUR numbers like this: 3241"
-				puts "!!!!"
+				puts "!!!!!!!!!!!!!!!!!!!"
 				guess_again
 			else
-				puts "!!!!"
+				puts
+				puts "!!!!!!!!!!!!!!!!!!!"
 				puts "Whoops! You must enter numbers 1-6 like this: 4256"
-				puts "!!!!"
+				puts "!!!!!!!!!!!!!!!!!!!"
 				guess_again
 			end
 		else
@@ -50,10 +52,12 @@ class Mastermind
 
 	def show_board
 		if !@board.empty?
+			puts "-------------------"
 			puts "Board so far: "
 			@board.each_with_index do |guess, i| 
 				puts "#{guess.join} #{@evaluate[i]}"
 			end
+			puts "-------------------"
 		end
 	end
 
