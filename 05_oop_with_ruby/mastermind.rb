@@ -27,9 +27,21 @@ class Mastermind
 			guess = gets.chomp
 			arr = []
 			guess.split("").each { |num| arr << num.to_i }
-			@board << arr
-			@turn += 1
-			check_guess(arr)
+			if sanitize_input(arr) == 1
+				@board << arr
+				@turn += 1
+				check_guess(arr)
+			elsif sanitize_input(arr) == 2
+				puts "!!!!"
+				puts "Whoops! You must enter exactly FOUR numbers like this: 3241"
+				puts "!!!!"
+				guess_again
+			else
+				puts "!!!!"
+				puts "Whoops! You must enter numbers 1-6 like this: 4256"
+				puts "!!!!"
+				guess_again
+			end
 		else
 			puts "Whoops! You ran out of turns"
 			puts "The correct answer was #{@answer.join}"
@@ -42,6 +54,22 @@ class Mastermind
 			@board.each_with_index do |guess, i| 
 				puts "#{guess.join} #{@evaluate[i]}"
 			end
+		end
+	end
+
+	def sanitize_input(arr)
+		checking = 0
+		arr.each do |n|
+			unless (1..6).include?(n)
+				checking += 1
+			end
+		end
+		if checking == 0 && arr.length == 4
+			return 1
+		elsif checking == 0 && arr.length != 4
+			return 2
+		else
+			return 3
 		end
 	end
 
