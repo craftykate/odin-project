@@ -30,7 +30,8 @@ class Mastermind
 			# If correctly inputted, go back to intro_user_is_master, confirm secret code and let computer make a guess (computer_guess)
 				# If there are turns left
 					# Increase number of turns
-					# Generate computer's guess
+					# Generate computer's guess (generate_guess)
+						# Loop through random guesses, checking the current guess against all previous guesses. If the current guess has the same amount of numbers in the same spaces as each previous guess said it should have, log that number and move on. Otherwise, pick a new guess
 					# Check if guess was correct (check_guess)
 						# If guess was correct 
 							# Show losing message (computer won)
@@ -57,9 +58,7 @@ class Mastermind
 		# This is for when the computer is guessing
 		# Initially set up so that each index (0-4) has all potential numbers (1-6) in it
 		@potential_numbers = Hash.new
-		4.times do |x|
-			@potential_numbers[x] = [1,2,3,4,5,6]
-		end
+		4.times { |x| @potential_numbers[x] = [1,2,3,4,5,6] }
 		# The current turn
 		@turn = 0
 		# Display intro message
@@ -167,9 +166,7 @@ class Mastermind
 		# As long as user hasn't run out of turns...
 		if @turn < 12
 			# If there was no error message and it isn't the first turn, show the board
-			if message == nil && @turn > 0 
-				show_board
-			end
+			show_board if (message == nil && @turn > 0)
 			puts 
 			puts "Enter your guess. You've used #{@turn} of 12 turns."
 			# Get user's guess
@@ -193,9 +190,7 @@ class Mastermind
 		puts "-------------------"
 		puts "Board so far: "
 		# Go through each guess and answers and display them
-		@board.each_with_index do |guess, i| 
-			puts "#{guess.join} #{@evaluate[i]}"
-		end
+		@board.each_with_index { |guess, i| puts "#{guess.join} #{@evaluate[i]}" }
 		puts "-------------------"
 	end
 
@@ -257,32 +252,67 @@ class Mastermind
 	def computer_guess
 		loop do
 			if @turn < 12
+				#Generate computer's guess from available numbers
+				generate_guess
+				# Increase number of turns
 				@turn += 1
 				puts 
 				puts "Press enter to see computer's try \##{@turn}"
 				see_next = gets.chomp
-				#Generate computer's guess from available numbers
-				comp_guess = []
-				4.times do |i|
-					comp_guess << @potential_numbers[i].sample
-				end
-				@board << comp_guess
 				# If guess was correct, stop loop
-				if check_guess(comp_guess)
+				if check_guess(@comp_guess)
 					break
 				# Otherwise, evaluate guess and keep going
 				else
 					evaluate_guess
 					# If not the first turn, display the computer's guesses
-					if @turn != 0
-						show_board
-					end
+					show_board if @turn != 0
 				end
 			# Computer couldn't guess! Show winning message
 			else
 				show_board
 				puts
 				puts "You won! Computer didn't guess code in 12 turns"
+				break
+			end
+		end
+	end
+
+	def generate_guess
+		# keep looping until computer makes a guess that satisfies the number of right numbers in all previous guesses
+		loop do
+			# Set computer's guess to an empty array
+			@comp_guess = []
+			# Put random (but valid) numbers in the array
+			4.times do |i|
+				@comp_guess << @potential_numbers[i].sample
+			end
+			# If this isn't the first guess, check guess against all other guesses
+			unless @board.empty?
+				# How many guesses need to be satisfied
+				guesses_to_check = @board.length
+				guesses_checked = 0
+				# Go through each previous guess in @board
+				@board.each_with_index do |previous_guess, i|
+					# Reset counting variable - this counts how many numbers are in the same spot
+					@count_same = 0
+					# Go through each number in previous guess
+					previous_guess.each_with_index do |num, j|
+						# If a number in the previous guess is in the same spot as a number in current guess, increase counting variable
+						@count_same += 1 if @comp_guess[j] == num
+					end
+					# If current guess has same amount of numbers in the same spot as @evaluate[i][0], it's a valid guess
+					guesses_checked += 1 if @count_same == @evaluate[i][0].to_i
+				end
+				# If the current guess satisfied all previous guesses, log the guess and move on
+				if guesses_to_check == guesses_checked
+					@board << @comp_guess
+					break
+				end
+				# If current guess didn't satisfy all previous guesses it will repeat the loop
+			# It was the first guess, so just log the guess (no other guesses to check it against)
+			else
+				@board << @comp_guess
 				break
 			end
 		end
