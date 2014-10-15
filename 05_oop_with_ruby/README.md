@@ -30,7 +30,7 @@ Build a Mastermind game from the command line where you have 12 turns to guess t
 
 ### My Notes
 
-If the user is the mastermind (the user makes up the secret code and the computer guesses it), the computer is pretty little smart. 
+If the user is the mastermind (the user makes up the secret code and the computer guesses it), the computer is pretty smart!
 
 - If it gets a result of none of its numbers being right and none of them being close (say, computer guessed '1234' and code was '5656') it will take all digits it guessed (1, 2, 3 and 4) entirely out of its list of available numbers and will only guess combinations of the remaining letters (5 and 6 in the above example). 
 
