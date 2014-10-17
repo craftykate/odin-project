@@ -13,7 +13,12 @@ class Hangman
 		@running_saved_game = nil
 		puts
 		puts "Welcome to hangman!"
-		intro
+		read_data
+		if @data.length > 0
+			intro
+		else 
+			new_game
+		end
 	end
 
 	protected 
@@ -147,6 +152,7 @@ class Hangman
 			if @running_saved_game != nil
 				over_write_data
 			end
+			go_again
 		end
 	end
 
@@ -196,6 +202,7 @@ class Hangman
 			if @running_saved_game != nil
 				over_write_data
 			end
+			go_again
 		# Got a letter but didn't win. Get another guess
 		elsif @word.include?(letter)
 			puts
@@ -208,6 +215,34 @@ class Hangman
 			@wrong_letters.sub!("_", letter)
 			@turn += 1
 			get_guess
+		end
+	end
+
+	def go_again
+		loop do 
+			puts
+			puts "See definition, start a new game, load a game, or quit?"
+			puts "1. See definition"
+			puts "2. Start a new game"
+			puts "3. Load a game"
+			puts "4. Quit"
+			option = gets.chomp
+			case option
+				when '1'
+					system("open http://dictionary.reference.com/browse/#{@word.join}")
+					intro
+					break
+				when '2'
+					new_game
+					break
+				when '3'
+					intro
+					break
+				when '4'
+					break
+				else
+					next
+			end
 		end
 	end
 
