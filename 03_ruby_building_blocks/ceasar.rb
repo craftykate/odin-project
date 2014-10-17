@@ -8,7 +8,7 @@ def caesar_cipher(str, num)
 		# If letter is a capital...
 		if l.ord.between?(65,90) 
 			# If letter is at the end of the alphabet...
-			if l.ord > (90 - num + 1)
+			if l.ord >= (90 - num + 1)
 				# Let cipher move to beginning of alphabet
 				cipher << (l.ord - 26 + num).chr
 			# Otherwise just move forward in alphabet
@@ -17,7 +17,7 @@ def caesar_cipher(str, num)
 			end
 		# If letter is lowercase, follow same instructions as above
 		elsif l.ord.between?(97,122)
-			if l.ord > (122 - num + 1)
+			if l.ord >= (122 - num + 1)
 				cipher << (l.ord - 26 + num).chr
 			else
 				cipher << (l.ord + num).chr
