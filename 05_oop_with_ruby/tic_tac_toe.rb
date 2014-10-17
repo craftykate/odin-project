@@ -63,7 +63,6 @@ class TicTacToe
 	def enter_move(spot)
 		# Put player's board piece in the spot they chose
 		@board[spot-1][-1] = @board_piece
-			print @board
 		# Check if the user won
 		if check_win ==  1
 			show_board
@@ -91,7 +90,6 @@ class TicTacToe
 			check_win_array << i if spot.include?(@board_piece)
 			board_full += 1 if spot.include?("X") || spot.include?("O")
 		end
-		print check_win_array
 		won = 0
 		winning_numbers.each do |arr_wins|
 			check_arr = 0
