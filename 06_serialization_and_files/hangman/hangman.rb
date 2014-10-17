@@ -236,7 +236,7 @@ class Hangman
 					new_game
 					break
 				when '3'
-					intro
+					initialize
 					break
 				when '4'
 					break
