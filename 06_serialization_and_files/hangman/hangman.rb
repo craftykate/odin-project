@@ -223,9 +223,8 @@ class Hangman
 			puts
 			puts "See definition, start a new game, load a game, or quit?"
 			puts "1. See definition"
-			puts "2. Start a new game"
-			puts "3. Load a game"
-			puts "4. Quit"
+			puts "2. Start a new game or load a saved one"
+			puts "3. Quit"
 			option = gets.chomp
 			case option
 				when '1'
@@ -233,12 +232,9 @@ class Hangman
 					intro
 					break
 				when '2'
-					new_game
-					break
-				when '3'
 					initialize
 					break
-				when '4'
+				when '3'
 					break
 				else
 					next
