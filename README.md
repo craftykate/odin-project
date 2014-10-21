@@ -10,3 +10,4 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 - [Advance Ruby Building Blocks](https://github.com/craftykate/odin-project/tree/master/04_advanced_building_blocks)
 - [OOP with Ruby](https://github.com/craftykate/odin-project/tree/master/05_oop_with_ruby)
 - [Serialization and Files](https://github.com/craftykate/odin-project/tree/master/06_serialization_and_files)
+- [Ruby on the Web](https://github.com/craftykate/odin-project/tree/master/07_ruby_on_the_web)
