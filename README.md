@@ -23,3 +23,5 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 	- Jumpstart Lab's Event Manager
 	- Hangman game (another of my faves!)
 - [Ruby on the Web](https://github.com/craftykate/odin-project/tree/master/07_ruby_on_the_web)
+	- Jumpstart Lab's Twitter client
+	- Build a Ruby web server
