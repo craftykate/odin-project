@@ -12,6 +12,8 @@ Project source: http://www.theodinproject.com/ruby-programming/ruby-on-the-web
 
 ## Build a Ruby Web Server
 
+[ruby_server](https://github.com/craftykate/odin-project/tree/master/07_ruby_on_the_web/ruby_server)
+
 **I did the basic version of this, but not the full version**
 
 Part of the reason for getting into how Ruby interacts with the web is because it's directly relevant to what you'll be doing later on with Rails. Rails is just Ruby code neatly packaged and highly opinionated. Anything Rails does, you can reproduce on your own (given the time) with some Ruby knowledge.
