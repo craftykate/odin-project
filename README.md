@@ -25,3 +25,5 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 - [Ruby on the Web](https://github.com/craftykate/odin-project/tree/master/07_ruby_on_the_web)
 	- Jumpstart Lab's Twitter client
 	- Build a Ruby web server
+- [Recursion](https://github.com/craftykate/odin-project/tree/master/08_recursion)
+	- Write a Fibonacci Sequence program using iteration and again recursively
