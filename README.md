@@ -28,3 +28,5 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 - [Recursion](https://github.com/craftykate/odin-project/tree/master/08_recursion)
 	- Write a Fibonacci Sequence program using iteration and again recursively
 	- Merge Sort, recursively
+- [Basic Data Structures and Algorithms](https://github.com/craftykate/odin-project/tree/master/00_data_structures_and_algorithms)
+	- Build and search a binary tree
