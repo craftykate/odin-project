@@ -1,15 +1,11 @@
 def merge_sort(arr)
-	return arr if arr.length <= 1
+	return arr if arr.length < 2
 	half = arr.length/2
 	arr1 = arr[0..half - 1]
 	arr2 = arr[half..-1]
 	arr1 = merge_sort(arr1)
 	arr2 = merge_sort(arr2)
-	merge(arr1, arr2)
-end
-
-def merge(arr1, arr2)
-	answer = []
+	answer ||= []
 	while arr1.length > 0 && arr2.length > 0
 		if arr1[0] <= arr2[0]
 			answer << arr1.shift
