@@ -4,6 +4,8 @@ Project source: http://www.theodinproject.com/ruby-programming/data-structures-a
 
 ## Searching Binary Trees
 
+[binary_search_tree](https://github.com/craftykate/odin-project/tree/master/09_data_structures_and_algorithms/binary_search_tree.rb)
+
 You'll build a simple binary tree data structure from some arbitrary input and also the "crawler" function that will locate data inside of it.
 
 1. Build a class Node. It should have a value that it stores and also links to its parent and children (if they exist). Build getters and setters for it (e.g. parent node, child node(s)).
