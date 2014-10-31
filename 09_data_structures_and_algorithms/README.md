@@ -18,3 +18,15 @@ You'll build a simple binary tree data structure from some arbitrary input and a
 8. Tips:
 	1. You can think of the dfs_rec method as a little robot that crawls down the tree, checking if a node is the correct node and spawning other little robots to keep searching the tree. No robot is allowed to turn on, though, until all the robots to its left have finished their task.
 	2. The method will need to take in both the target value and the current node to compare against.
+
+	## Knight's Travails
+
+[knight_moves](https://github.com/craftykate/odin-project/tree/master/09_data_structures_and_algorithms/knight_moves.rb)
+
+Your task is to build a function knight_moves that shows the simplest possible way to get from one square to another by outputting all squares the knight will stop on along the way.
+
+You can think of the board as having 2-dimensional coordinates. Your function would therefore look like:
+
+`knight_moves([0,0],[1,2]) == [[0,0],[1,2]]`
+`knight_moves([0,0],[3,3]) == [[0,0],[1,2],[3,3]]`
+`knight_moves([3,3],[0,0]) == [[3,3],[1,2],[0,0]]`

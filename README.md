@@ -30,3 +30,4 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 	- Merge Sort, recursively
 - [Basic Data Structures and Algorithms](https://github.com/craftykate/odin-project/tree/master/09_data_structures_and_algorithms)
 	- Build and search a binary tree
+	- Find the shortest path a knight would travel to get from one spot on a chess board to another
