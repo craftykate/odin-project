@@ -31,3 +31,5 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 - [Basic Data Structures and Algorithms](https://github.com/craftykate/odin-project/tree/master/09_data_structures_and_algorithms)
 	- Build and search a binary tree
 	- Find the shortest path a knight would travel to get from one spot on a chess board to another
+- [Testing with RSpec](https://github.com/craftykate/odin-project/tree/master/10_testing_with_rspec)
+	- Go back and write tests for Caesar Cipher and enumerable methods
