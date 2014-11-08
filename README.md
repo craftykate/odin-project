@@ -32,4 +32,4 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 	- Build and search a binary tree
 	- Find the shortest path a knight would travel to get from one spot on a chess board to another
 - [Testing with RSpec](https://github.com/craftykate/odin-project/tree/master/10_testing_with_rspec)
-	- Go back and write tests for Caesar Cipher and enumerable methods
+	- Go back and write tests for Caesar Cipher, enumerable methods and Tic Tac Toe
