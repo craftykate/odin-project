@@ -2,4 +2,4 @@
 .sass-cache
 _reset.scss
 tasks.todo
-hangman_save.csv
+06_serialization_and_files/hangman/hangman_saves.csvhangman_save.csv
