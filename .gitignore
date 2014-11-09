@@ -2,3 +2,4 @@
 .sass-cache
 _reset.scss
 tasks.todo
+hangman_save.csv
