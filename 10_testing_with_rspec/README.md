@@ -23,3 +23,11 @@ Write tests for your Tic Tac Toe project. In this situation, it's not quite as s
 1. Start by writing tests to make sure a player wins when he or she should, e.g. when the board reads X X X across the top row, your #game-over method (or its equivalent) should be triggered.
 2. Test each of your critical methods to make sure they function properly and handle edge cases.
 3. Try using mocks/doubles to isolate methods and make sure that they're sending you back the right outputs.
+
+## Connect Four with RSpec
+
+[connect_four_rspec](https://github.com/craftykate/odin-project/tree/master/10_testing_with_rspec/connect_four_rspec)
+
+Build Connect Four! Just be sure to keep it TDD.
+
+Only write exactly enough code to make your test pass. Oftentimes, you'll end up having to write two tests in order to make a method do anything useful. That's okay here. It may feel a bit like overkill, but that's the point of the exercise. Your thoughts will probably be something like "Okay, I need to make this thing happen. How do I test it? Okay, wrote the test, how do I code it into Ruby? Okay, wrote the Ruby, how can I make this better?" You'll find yourself spending a fair bit of time Googling and trying to figure out exactly how to test a particular bit of functionality. That's also okay... You're really learning RSpec here, not Ruby, and it takes some getting used to.
