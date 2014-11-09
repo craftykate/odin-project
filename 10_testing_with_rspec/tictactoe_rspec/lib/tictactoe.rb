@@ -140,9 +140,9 @@ module TicTacToe
 		end
 		
 		def show_board
-			up = "\u2503"
-			over = "\u2501"
-			plus = "\u254B"
+			up = "\u2502"
+			over = "\u2500"
+			plus = "\u253c"
 			[ " ",
 				@board[0] + up + @board[1] + up + @board[2], 
 				over*4 + plus + over*4 + plus + over*4, 
