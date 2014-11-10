@@ -128,11 +128,116 @@ class Hangman
 	# Show guesses so far
 	def show_board
 		puts "You have use #{@turn} of 9 turns. Type \"save\" to save game and quit."
-		puts
+		show_hangman
 		puts "Word:   #{@guess.split("").join(" ")}"
 		puts
 		puts "Misses: #{@wrong_letters.split("").join(" ")}"
 		puts
+	end
+
+	def show_hangman
+		if @turn == 0
+			puts
+		elsif @turn == 1
+			puts
+			puts "       "
+			puts "       "
+			puts "       "
+			puts "       "
+			puts "       "
+			puts "      ┃  "
+			puts "      ┃  "
+			puts "      ┃  "
+			puts "     ━┻━  "
+		elsif @turn == 2
+			puts
+			puts "      ┃  "
+			puts "      ┃  "
+			puts "      ┃  "
+			puts "      ┃  "
+			puts "      ┃  "
+			puts "      ┃  "
+			puts "      ┃  "
+			puts "      ┃  "
+			puts "     ━┻━  "
+		elsif @turn == 3
+			puts "      ┏━━━━━┓  "
+			puts "      ┃     ┃ "
+			puts "      ┃   "
+			puts "      ┃   "
+			puts "      ┃   "
+			puts "      ┃   "
+			puts "      ┃   "
+			puts "      ┃   "
+			puts "      ┃   "
+			puts "     ━┻━  "
+		elsif @turn == 4
+			puts "      ┏━━━━━┓  "
+			puts "      ┃     ┃ "
+			puts "      ┃    ╭╶╮      "
+			puts "      ┃    ╰╶╯      "
+			puts "      ┃          "
+			puts "      ┃          "
+			puts "      ┃          "
+			puts "      ┃          "
+			puts "      ┃          "
+			puts "     ━┻━           "
+		elsif @turn == 5
+			puts "      ┏━━━━━┓  "
+			puts "      ┃     ┃ "
+			puts "      ┃    ╭╶╮      "
+			puts "      ┃    ╰╶╯      "
+			puts "      ┃    ╲      "
+			puts "      ┃          "
+			puts "      ┃          "
+			puts "      ┃          "
+			puts "      ┃          "
+			puts "     ━┻━           "
+		elsif @turn == 6
+			puts "      ┏━━━━━┓  "
+			puts "      ┃     ┃ "
+			puts "      ┃    ╭╶╮      "
+			puts "      ┃    ╰╶╯      "
+			puts "      ┃    ╲ ╱     "
+			puts "      ┃          "
+			puts "      ┃          "
+			puts "      ┃          "
+			puts "      ┃          "
+			puts "     ━┻━           "
+		elsif @turn == 7
+			puts "      ┏━━━━━┓  "
+			puts "      ┃     ┃ "
+			puts "      ┃    ╭╶╮      "
+			puts "      ┃    ╰╶╯      "
+			puts "      ┃    ╲ ╱     "
+			puts "      ┃     │     "
+			puts "      ┃         "
+			puts "      ┃          "
+			puts "      ┃          "
+			puts "     ━┻━           "
+		elsif @turn == 8
+			puts "      ┏━━━━━┓  "
+			puts "      ┃     ┃ "
+			puts "      ┃    ╭╶╮      "
+			puts "      ┃    ╰╶╯      "
+			puts "      ┃    ╲ ╱     "
+			puts "      ┃     │     "
+			puts "      ┃    ╱      "
+			puts "      ┃          "
+			puts "      ┃          "
+			puts "     ━┻━           "
+		elsif @turn == 9
+			puts "      ┏━━━━━┓  "
+			puts "      ┃     ┃ "
+			puts "      ┃    ╭╶╮      "
+			puts "      ┃    ╰╶╯      "
+			puts "      ┃    ╲ ╱     "
+			puts "      ┃     │     "
+			puts "      ┃    ╱ ╲     "
+			puts "      ┃          "
+			puts "      ┃          "
+			puts "     ━┻━           "
+		end
 	end
 
 	# Get a new letter from user
