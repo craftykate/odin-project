@@ -8,7 +8,7 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 	- Using HTML and CSS, recreate google's search page
 - [Test First Ruby](https://github.com/craftykate/odin-project/tree/master/ch02_test_first_ruby)
 	- Do the TDD programs from Test First Ruby
-- [Ruby Building Blocks](https://github.com/craftykate/odin-project/tree/master/03_ruby_building_blocks)
+- [Ruby Building Blocks](https://github.com/craftykate/odin-project/tree/master/ch03_ruby_building_blocks)
 	- Caesar Cipher
 	- Stock picker program
 	- Finding how many times words in a dictionary appear in a string
