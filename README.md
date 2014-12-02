@@ -12,7 +12,7 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 	- Caesar Cipher
 	- Stock picker program
 	- Finding how many times words in a dictionary appear in a string
-- [Advance Ruby Building Blocks](https://github.com/craftykate/odin-project/tree/master/04_advanced_building_blocks)
+- [Advance Ruby Building Blocks](https://github.com/craftykate/odin-project/tree/master/ch03_advanced_building_blocks)
 	- Bubble sort
 	- Bubble sort using a given block
 	- Rewriting many enumerable methods
