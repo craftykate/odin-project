@@ -4,7 +4,7 @@ Project source: http://www.theodinproject.com/ruby-programming/recursion
 
 ## Fibonacci
 
-[fibonacci](https://github.com/craftykate/odin-project/tree/master/08_recursion/fibonacci.rb)
+[fibonacci](https://github.com/craftykate/odin-project/tree/master/ch03_recursion/fibonacci.rb)
 
 The Fibonacci Sequence, which sums each number with the one before it, is a great example of a problem that can be solved recursively.
 
@@ -14,7 +14,7 @@ The Fibonacci Sequence, which sums each number with the one before it, is a grea
 
 ## Merge Sort
 
-[merge_sort](https://github.com/craftykate/odin-project/tree/master/08_recursion/merge_sort.rb)
+[merge_sort](https://github.com/craftykate/odin-project/tree/master/ch03_recursion/merge_sort.rb)
 
 We spent some time early on dealing with sorting (e.g. bubble sort). Now it's time to take another look at sorting with Merge Sort, a type of sort that lends itself well to recursion and can be much faster than bubble sort on the right data sets. You'll build a method which sorts a given array but uses a "merge sort" method for doing so.
 

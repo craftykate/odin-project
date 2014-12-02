@@ -1,5 +1,7 @@
 # Chess: Final Ruby Project
 
+Project Source: http://www.theodinproject.com/ruby-programming/ruby-final-project
+
 ## Program Instructions
 
 1. Build a command line Chess game where two players can play against each other.
