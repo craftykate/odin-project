@@ -34,3 +34,5 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 - [Testing with RSpec](https://github.com/craftykate/odin-project/tree/master/10_testing_with_rspec)
 	- Go back and write tests for Caesar Cipher, enumerable methods and Tic Tac Toe
 	- Build a Connect Four game using TDD
+- [Chess: Final Ruby Project](https://github.com/craftykate/odin-project/tree/master/11_chess)
+	- Write a command line chess game

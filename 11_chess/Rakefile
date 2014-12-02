@@ -1,0 +1,12 @@
+require 'rspec/core/rake_task'
+
+task :default => :spec
+
+task :spec do 
+	ruby "lib/chess.rb"
+end
+
+RSpec::Core::RakeTask.new(:spec) do |t|
+	t.rspec_opts = ["-f documentation --c"]
+	t.verbose = false
+end
