@@ -4,7 +4,7 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 
 ## Projects
 
-- [Recreate Google's Homepage](https://github.com/craftykate/odin-project/tree/master/01_google_homepage)
+- [Recreate Google's Homepage](https://github.com/craftykate/odin-project/tree/master/ch02_google_homepage)
 	- Using HTML and CSS, recreate google's search page
 - [Test First Ruby](https://github.com/craftykate/odin-project/tree/master/02_test_first_ruby)
 	- Do the TDD programs from Test First Ruby
