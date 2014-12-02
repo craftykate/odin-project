@@ -6,7 +6,7 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 
 - [Recreate Google's Homepage](https://github.com/craftykate/odin-project/tree/master/ch02_google_homepage)
 	- Using HTML and CSS, recreate google's search page
-- [Test First Ruby](https://github.com/craftykate/odin-project/tree/master/02_test_first_ruby)
+- [Test First Ruby](https://github.com/craftykate/odin-project/tree/master/ch02_test_first_ruby)
 	- Do the TDD programs from Test First Ruby
 - [Ruby Building Blocks](https://github.com/craftykate/odin-project/tree/master/03_ruby_building_blocks)
 	- Caesar Cipher
