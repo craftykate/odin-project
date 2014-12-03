@@ -4,14 +4,27 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 
 ## Projects
 
+### Chapter 02 - Web Development 101
+
+**HTML**
+
 - [Recreate Google's Homepage](https://github.com/craftykate/odin-project/tree/master/ch02_google_homepage)
 	- Using HTML and CSS, recreate google's search page
+
+**Ruby**
+
 - [Test First Ruby](https://github.com/craftykate/odin-project/tree/master/ch02_test_first_ruby)
 	- Do the TDD programs from Test First Ruby
+
+**JavaScript**
+
 - [Euler in JavaScript](https://github.com/craftykate/odin-project/tree/master/ch02_euler_in_javascript)
 	- Multiples of 3 and 5
 	- Even Fibonacci Numbers
 	- Largest Prime Factor
+
+### Chapter 03 - Advanced Ruby
+
 - [Ruby Building Blocks](https://github.com/craftykate/odin-project/tree/master/ch03_ruby_building_blocks)
 	- Caesar Cipher
 	- Stock picker program
