@@ -19,5 +19,5 @@ for (i = 3; i < 4000000; i = fibs[fibs.length - 1] + fibs[fibs.length - 2]) {
     sum_of_even_fibs += i;
   }
 }
-// Print out sum of even fibonacci numbers for verification
+// Run program and print out sum of even fibonacci numbers for verification
 console.log(sum_of_even_fibs); // => 4,613,732

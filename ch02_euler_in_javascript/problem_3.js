@@ -29,3 +29,6 @@ function getLargestPrimeFactor(num) {
 		i--;
 	}
 }
+
+// Run program and print out largest prime number for verification
+console.log(getLargestPrimeFactor(13195)); // => 29

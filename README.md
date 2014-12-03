@@ -7,6 +7,7 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 - [Recreate Google's Homepage](https://github.com/craftykate/odin-project/tree/master/ch02_google_homepage)
 	- Using HTML and CSS, recreate google's search page
 - [Test First Ruby](https://github.com/craftykate/odin-project/tree/master/ch02_test_first_ruby)
+	- Do the TDD programs from Test First Ruby
 - [Euler in JavaScript](https://github.com/craftykate/odin-project/tree/master/ch02_euler_in_javascript)
 	- Multiples of 3 and 5
 	- Even Fibonacci Numbers

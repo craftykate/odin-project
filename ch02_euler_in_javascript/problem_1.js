@@ -12,5 +12,5 @@ for (var i = 1; i < 1000; i++) {
 		sum_of_multiples += i;
 	}
 }
-// Print out sum for verification
+// Run program and print out sum for verification
 console.log(sum_of_multiples); // => 233,168
