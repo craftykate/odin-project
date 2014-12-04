@@ -22,6 +22,8 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 	- Multiples of 3 and 5
 	- Even Fibonacci Numbers
 	- Largest Prime Factor
+- [Etch-a-sketch in JavaScript](https://github.com/craftykate/odin-project/tree/master/ch02_etch_a_sketch)
+	- Build a browser etch-a-sketch/drawing board
 
 ### Chapter 03 - Advanced Ruby
 
