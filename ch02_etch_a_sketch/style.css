@@ -1,0 +1,60 @@
+/* _reset.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+body { font-family: 'Quicksand', sans-serif; font-size: 1em; color: #545252; }
+
+ul, p { line-height: 150%; text-align: justify; }
+
+p { margin-bottom: 1em; }
+
+i, em { font-style: italic; }
+
+strong { font-weight: bold; }
+
+.oops { color: red; }
+
+body { position: relative; margin: 0 auto; background-image: url(../img/background.jpeg); background-repeat: repeat; }
+
+#wrapper { background-color: pink; width: 90%; max-width: 980px; margin: 0 auto; }
+
+.clear { clear: both; }
+
+#header { background-color: yellow; }
+#header ul { text-align: center; }
+#header ul li { display: inline; }
+
+#sidebar { background-color: #cccccc; width: 22.44898%; margin-left: 2.04082%; margin-right: 0; }
+
+#content { background-color: orange; width: 71.42857%; margin-left: 2.04082%; margin-right: 2.04082%; float: right; }
+
+form { background-color: white; margin: 30px auto; width: 90%; padding: 20px; -webkit-border-radius: 20px; border-radius: 20px; -o-border-radius: 20px; -ms-border-radius: 20px; -moz-border-radius: 20px; }
+form fieldset legend { font-size: 130%; margin-bottom: 10px; }
+form fieldset div:not([class=radio]):not([class=checkbox]) { clear: both; padding-top: 10px; }
+form fieldset label { float: left; width: 40%; text-align: right; padding-right: 10px; display: block; }
+form fieldset input.style { width: 50%; height: 20px; }
+form fieldset textarea { width: 50%; height: 100px; }
+form fieldset .radio, form fieldset .checkbox { display: block; float: left; width: 50%; }
+form fieldset .radio input, form fieldset .checkbox input { display: inline-block; position: relative; margin-right: 8px; top: -2px; }
+form fieldset input.style, form fieldset textarea { -webkit-border-radius: 10px; border-radius: 10px; -o-border-radius: 10px; -ms-border-radius: 10px; -moz-border-radius: 10px; padding: 5px; border: 1px solid gray; -webkit-box-shadow: #919191 5px 5px 5px -5px inset; box-shadow: #919191 5px 5px 5px -5px inset; -o-box-shadow: #919191 5px 5px 5px -5px inset; -ms-box-shadow: #919191 5px 5px 5px -5px inset; -moz-box-shadow: #919191 5px 5px 5px -5px inset; }
+form fieldset input.style:focus, form fieldset textarea:focus { outline-style: none; outline-width: initial; outline-color: #000000; -webkit-box-shadow: #919191 5px 5px 5px -5px inset, #919191 0px 0px 3px 1px; box-shadow: #919191 5px 5px 5px -5px inset, #919191 0px 0px 3px 1px; -o-box-shadow: #919191 5px 5px 5px -5px inset, #919191 0px 0px 3px 1px; -ms-box-shadow: #919191 5px 5px 5px -5px inset, #919191 0px 0px 3px 1px; -moz-box-shadow: #919191 5px 5px 5px -5px inset, #919191 0px 0px 3px 1px; }
+form fieldset .submit { width: 100%; text-align: center; }
+form fieldset .submit input { cursor: pointer; font-family: 'Quicksand', sans-serif; }
+form fieldset .submit .shinybutton { display: inline-block; -webkit-border-radius: 16px; border-radius: 16px; -o-border-radius: 16px; -ms-border-radius: 16px; -moz-border-radius: 16px; position: relative; font-size: 1em; color: white; text-shadow: rgba(10, 10, 10, 0.49609) 1px 2px 1px; text-align: center; border: 1px solid orange; margin: 0px 15px 0px 15px; padding: 8px 30px 8px 30px; -webkit-box-shadow: rgba(255, 165, 0, 0.4) 0px 10px 16px; box-shadow: rgba(255, 165, 0, 0.4) 0px 10px 16px; -o-box-shadow: rgba(255, 165, 0, 0.4) 0px 10px 16px; -ms-box-shadow: rgba(255, 165, 0, 0.4) 0px 10px 16px; -moz-box-shadow: rgba(255, 165, 0, 0.4) 0px 10px 16px; background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffdb99), color-stop(1, orange)); background: -moz-linear-gradient(center top, #ffdb99 5%, orange 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='lighten($buttoncolor, $lightenby)', endColorstr='$buttoncolor'); background-color: orange; }
+form fieldset .submit .shinybutton:hover { background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, orange), color-stop(1, #ffdb99)); background: -moz-linear-gradient(center top, orange 5%, #ffdb99 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$buttoncolor', endColorstr='lighten($buttoncolor, $lightenby)'); background-color: #ffdb99; }
+
+#footer { background-color: #ff6666; padding: 10px; clear: both; }
+#footer ul { text-align: center; }
+#footer li { display: inline; }
