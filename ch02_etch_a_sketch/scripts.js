@@ -12,7 +12,7 @@ $(document).ready(function() {
 	// Shorten it a little to remove white space
 	$("#etch").width(417);
 	$("#etch").height(417);
-	
+
 	// Create the grid
 	createEtch(squareSize, width);
 
@@ -67,21 +67,21 @@ $(document).ready(function() {
 			$(this).css("opacity", "+=0.2");
 		});
 	});
+
+	// Creates the rows
+	function createEtch(squares, width) {
+		// Create the rows
+		for (j = 0; j < squares; j++) {
+			$("#etch").append($("<div class='row' style='height: "+width+"px'>"));
+			createSquares(squares, width);
+			$("#etch").append($("</div>"));
+		}
+	}
+
+	// Creates the squares
+	function createSquares(squares, width) {
+		for (i = 0; i < squares; i++) {
+			$("#etch").find(".row").last().append($("<div class='cell' style='width: "+width+"px; height: "+width+"px;'></div>"));
+		}
+	}
 });
-
-// Creates the rows
-function createEtch(squares, width) {
-	// Create the rows
-	for (j = 0; j < squares; j++) {
-		$("#etch").append($("<div class='row' style='height: "+width+"px'>"));
-		createSquares(squares, width);
-		$("#etch").append($("</div>"));
-	}
-}
-
-// Creates the squares
-function createSquares(squares, width) {
-	for (i = 0; i < squares; i++) {
-		$("#etch").find(".row").last().append($("<div class='cell' style='width: "+width+"px; height: "+width+"px;'></div>"));
-	}
-}

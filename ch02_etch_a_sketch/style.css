@@ -44,25 +44,10 @@ body { position: relative; margin: 0 auto; }
 #content .clear-board { margin: 0 auto; width: 50%; text-align: center; }
 #content .clear-board button { cursor: pointer; display: inline-block; padding: 10px 15px; margin: 0 0 20px 0; color: white; -webkit-border-radius: 10px; border-radius: 10px; -o-border-radius: 10px; -ms-border-radius: 10px; -moz-border-radius: 10px; background-color: #e6a330; border: 1px solid #e6a330; }
 #content .clear-board button:hover { background-color: #f1cb8b; color: #9d6a13; }
-#content #etch { margin: 0 auto; -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 1px; box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 1px; -o-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 1px; -ms-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 1px; -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 1px; width: 417px; height: 417px; overflow: hidden; }
+#content #etch { margin: 0 auto; -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 1px; box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 1px; -o-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 1px; -ms-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 1px; -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 1px; overflow: hidden; }
 #content #etch .row { display: block; width: 100%; }
 #content #etch .row .cell { display: inline-block; padding: 0; opacity: 0.2; }
 #content #instructions { width: 50%; margin: 0 auto; padding: 20px 0 0 0; }
-
-form { background-color: white; margin: 30px auto; width: 90%; padding: 20px; -webkit-border-radius: 20px; border-radius: 20px; -o-border-radius: 20px; -ms-border-radius: 20px; -moz-border-radius: 20px; }
-form fieldset legend { font-size: 130%; margin-bottom: 10px; }
-form fieldset div:not([class=radio]):not([class=checkbox]) { clear: both; padding-top: 10px; }
-form fieldset label { float: left; width: 40%; text-align: right; padding-right: 10px; display: block; }
-form fieldset input.style { width: 50%; height: 20px; }
-form fieldset textarea { width: 50%; height: 100px; }
-form fieldset .radio, form fieldset .checkbox { display: block; float: left; width: 50%; }
-form fieldset .radio input, form fieldset .checkbox input { display: inline-block; position: relative; margin-right: 8px; top: -2px; }
-form fieldset input.style, form fieldset textarea { -webkit-border-radius: 10px; border-radius: 10px; -o-border-radius: 10px; -ms-border-radius: 10px; -moz-border-radius: 10px; padding: 5px; border: 1px solid gray; -webkit-box-shadow: #919191 5px 5px 5px -5px inset; box-shadow: #919191 5px 5px 5px -5px inset; -o-box-shadow: #919191 5px 5px 5px -5px inset; -ms-box-shadow: #919191 5px 5px 5px -5px inset; -moz-box-shadow: #919191 5px 5px 5px -5px inset; }
-form fieldset input.style:focus, form fieldset textarea:focus { outline-style: none; outline-width: initial; outline-color: #000000; -webkit-box-shadow: #919191 5px 5px 5px -5px inset, #919191 0px 0px 3px 1px; box-shadow: #919191 5px 5px 5px -5px inset, #919191 0px 0px 3px 1px; -o-box-shadow: #919191 5px 5px 5px -5px inset, #919191 0px 0px 3px 1px; -ms-box-shadow: #919191 5px 5px 5px -5px inset, #919191 0px 0px 3px 1px; -moz-box-shadow: #919191 5px 5px 5px -5px inset, #919191 0px 0px 3px 1px; }
-form fieldset .submit { width: 100%; text-align: center; }
-form fieldset .submit input { cursor: pointer; font-family: Arial, Helvetica, sans-serif; }
-form fieldset .submit .shinybutton { display: inline-block; -webkit-border-radius: 16px; border-radius: 16px; -o-border-radius: 16px; -ms-border-radius: 16px; -moz-border-radius: 16px; position: relative; font-size: 1em; color: white; text-shadow: rgba(10, 10, 10, 0.49609) 1px 2px 1px; text-align: center; border: 1px solid orange; margin: 0px 15px 0px 15px; padding: 8px 30px 8px 30px; -webkit-box-shadow: rgba(255, 165, 0, 0.4) 0px 10px 16px; box-shadow: rgba(255, 165, 0, 0.4) 0px 10px 16px; -o-box-shadow: rgba(255, 165, 0, 0.4) 0px 10px 16px; -ms-box-shadow: rgba(255, 165, 0, 0.4) 0px 10px 16px; -moz-box-shadow: rgba(255, 165, 0, 0.4) 0px 10px 16px; background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffdb99), color-stop(1, orange)); background: -moz-linear-gradient(center top, #ffdb99 5%, orange 100%); background-color: orange; }
-form fieldset .submit .shinybutton:hover { background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, orange), color-stop(1, #ffdb99)); background: -moz-linear-gradient(center top, orange 5%, #ffdb99 100%); background-color: #ffdb99; }
 
 #footer { padding: 10px; clear: both; }
 #footer ul { text-align: center; }
