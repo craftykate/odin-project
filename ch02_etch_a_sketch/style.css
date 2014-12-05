@@ -44,7 +44,7 @@ body { position: relative; margin: 0 auto; }
 #content .clear-board { margin: 0 auto; width: 50%; text-align: center; }
 #content .clear-board button { cursor: pointer; display: inline-block; padding: 10px 15px; margin: 0 0 20px 0; color: white; -webkit-border-radius: 10px; border-radius: 10px; -o-border-radius: 10px; -ms-border-radius: 10px; -moz-border-radius: 10px; background-color: #e6a330; border: 1px solid #e6a330; }
 #content .clear-board button:hover { background-color: #f1cb8b; color: #9d6a13; }
-#content #etch { margin: 0 auto; -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 1px; box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 1px; -o-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 1px; -ms-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 1px; -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 1px; }
+#content #etch { margin: 0 auto; -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 1px; box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 1px; -o-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 1px; -ms-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 1px; -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 1px; width: 417px; height: 417px; }
 #content #etch .row { display: block; width: 100%; }
 #content #etch .row .cell { display: inline-block; padding: 0; opacity: 0.2; }
 #content #instructions { width: 50%; margin: 0 auto; padding: 20px 0 0 0; }
