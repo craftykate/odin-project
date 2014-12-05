@@ -7,6 +7,12 @@ $(document).ready(function() {
 	// width is the size of each square
 	var width = (etchWidth - 1) / squareSize;
 
+	// Create the etch div to hold the squares
+	$("#instructions").before($("<div id='etch'></div>"));
+	// Shorten it a little to remove white space
+	$("#etch").width(417);
+	$("#etch").height(417);
+	
 	// Create the grid
 	createEtch(squareSize, width);
 
@@ -41,7 +47,7 @@ $(document).ready(function() {
 		// newWidth sets the width of the new squares 
 		var newWidth = (etchWidth - 1) / newSquareSize;
 		// Delete the existing container
-		$("#etch").detach();
+		$("#etch").empty();
 		// Create the new grid with new variables
 		createEtch(newSquareSize, newWidth);
 
@@ -65,11 +71,6 @@ $(document).ready(function() {
 
 // Creates the rows
 function createEtch(squares, width) {
-	// Create the etch div to hold the squares
-	$("#instructions").before($("<div id='etch'></div>"));
-	// Shorten it a little to remove white space
-	$("#etch").width(417);
-	$("#etch").height(417);
 	// Create the rows
 	for (j = 0; j < squares; j++) {
 		$("#etch").append($("<div class='row' style='height: "+width+"px'>"));
