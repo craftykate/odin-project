@@ -12,6 +12,7 @@ $(document).ready(function() {
 	// Shorten it a little to remove white space
 	$("#etch").width(417);
 	$("#etch").height(417);
+	$("#etch").css("display", "block");
 
 	// Create the grid
 	createEtch(squareSize, width);
