@@ -25,6 +25,11 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 - [Etch-a-sketch in JavaScript](https://github.com/craftykate/odin-project/tree/master/ch02_etch_a_sketch)
 	- Build a browser etch-a-sketch/drawing board
 
+**Rails**
+
+- [Rails Blog](https://github.com/craftykate/odin-project/tree/master/ch02_rails_blog)
+	- Follow along with Jumpstart Labs' tutorial to build a blog
+
 ### Chapter 03 - Advanced Ruby
 
 - [Ruby Building Blocks](https://github.com/craftykate/odin-project/tree/master/ch03_ruby_building_blocks)
