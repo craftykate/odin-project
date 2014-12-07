@@ -1,4 +1,4 @@
-<h1><%= @article.title %></h1>
+<h1><%= @article.title %> </h1><%= link_to "Home", articles_path, class: "new_article" %>
 <% post_time = @article.created_at %>
 <p>Posted <%= distance_of_time_in_words(Time.now, post_time) %> ago on <%=post_time.strftime("%b %d, %Y at %I:%M %p") %></p><br/>
 <p>
