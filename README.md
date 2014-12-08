@@ -1,13 +1,10 @@
 # The Odin Project
 
-I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on web development. These are my projects.
+I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on web development. These are all the uploadable projects.
 
 ## Projects
 
-_Lest you think I can't count, there are no projects in Chapter 01 to upload._
-
 ### Chapter 02 - Web Development 101
-_A healthy dose of everything_
 
 - **HTML:** [Recreate Google's Homepage](https://github.com/craftykate/odin-project/tree/master/Chapter_02-Web_Development_101/google_homepage)
 	- Using HTML and CSS, recreate google's search page
