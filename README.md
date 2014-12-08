@@ -4,7 +4,10 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 
 ## Projects
 
+_Lest you think I can't count, there are no projects in Chapter 01 to upload._
+
 ### Chapter 02 - Web Development 101
+_A healthy dose of everything_
 
 - **HTML:** [Recreate Google's Homepage](https://github.com/craftykate/odin-project/tree/master/Chapter_02-Web_Development_101/google_homepage)
 	- Using HTML and CSS, recreate google's search page
@@ -54,3 +57,4 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 
 - [Sample Rails App](https://github.com/craftykate/odin-project/tree/master/Chapter_04-Advanced_Rails/sample_rails_app)
 	- Build a very basic sample Rails app of users and microposts
+
