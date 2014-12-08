@@ -60,3 +60,8 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 	- Build a Connect Four game using TDD
 - [Chess: Final Ruby Project](https://github.com/craftykate/odin-project/tree/master/ch03_chess)
 	- Write a command line chess game
+
+### Chapter 04 - Advanced Rails
+
+- [Sample Rails App](https://github.com/craftykate/odin-project/tree/master/ch04_sample_rails_app)
+	- Build a very basic sample Rails app of users and microposts
