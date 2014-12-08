@@ -10,13 +10,13 @@ In other words, don't expect this to actually DO anything...
 
 ## My result:
 
-[See it live here!](http://htmlpreview.github.io/?https://github.com/craftykate/odin-project/blob/master/Chapter_02-Web_Development_101/ch02_google_homepage/index.html)
+[See it live here!](http://htmlpreview.github.io/?https://github.com/craftykate/odin-project/blob/master/Chapter_02-Web_Development_101/google_homepage/index.html)
 
-!["My" Google](https://github.com/craftykate/odin-project/blob/master/Chapter_02-Web_Development_101/ch02_google_homepage/img/mine.jpg)
+!["My" Google](https://github.com/craftykate/odin-project/blob/master/Chapter_02-Web_Development_101/google_homepage/img/mine.jpg)
 
 ## What I copied:
 
-![Google's Google](https://github.com/craftykate/odin-project/blob/master/Chapter_02-Web_Development_101/ch02_google_homepage/img/theirs.jpg)
+![Google's Google](https://github.com/craftykate/odin-project/blob/master/Chapter_02-Web_Development_101/google_homepage/img/theirs.jpg)
 
 ## Conclusion
 

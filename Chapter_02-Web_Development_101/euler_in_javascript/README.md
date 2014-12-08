@@ -4,7 +4,7 @@ Project Source: http://www.theodinproject.com/web-development-101/javascript-bas
 
 ## Problem 1: Multiples of 3 and 5
 
-[Problem 1](https://github.com/craftykate/odin-project/blob/master/Chapter_02-Web_Development_101/ch02_euler_in_javascript/problem_1.js)
+[Problem 1](https://github.com/craftykate/odin-project/blob/master/Chapter_02-Web_Development_101/euler_in_javascript/problem_1.js)
 
 Euler Source: https://projecteuler.net/problem=1
 
@@ -14,7 +14,7 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 
 ## Problem 2: Even Fibonacci Numbers
 
-[Problem 2](https://github.com/craftykate/odin-project/blob/master/Chapter_02-Web_Development_101/ch02_euler_in_javascript/problem_2.js)
+[Problem 2](https://github.com/craftykate/odin-project/blob/master/Chapter_02-Web_Development_101/euler_in_javascript/problem_2.js)
 
 Euler Source: https://projecteuler.net/problem=2
 
@@ -26,7 +26,7 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 
 ## Problem 3: Largest Prime Factor
 
-[Problem 3](https://github.com/craftykate/odin-project/blob/master/Chapter_02-Web_Development_101/ch02_euler_in_javascript/problem_3.js)
+[Problem 3](https://github.com/craftykate/odin-project/blob/master/Chapter_02-Web_Development_101/euler_in_javascript/problem_3.js)
 
 Euler Source: https://projecteuler.net/problem=3
 
