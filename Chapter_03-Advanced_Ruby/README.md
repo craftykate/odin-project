@@ -1,0 +1,30 @@
+# Chapter 03 - Advanced Ruby
+
+- [Ruby Building Blocks](https://github.com/craftykate/odin-project/tree/master/Chapter_03-Advanced_Ruby/ruby_building_blocks)
+    - Caesar Cipher
+    - Stock picker program
+    - Finding how many times words in a dictionary appear in a string
+- [Advance Ruby Building Blocks](https://github.com/craftykate/odin-project/tree/master/Chapter_03-Advanced_Ruby/advanced_building_blocks)
+    - Bubble sort
+    - Bubble sort using a given block
+    - Rewriting many enumerable methods
+- [OOP with Ruby](https://github.com/craftykate/odin-project/tree/master/Chapter_03-Advanced_Ruby/oop_with_ruby)
+    - Tic Tac Toe game
+    - Mastermind game (one of my faves!)
+- [Serialization and Files](https://github.com/craftykate/odin-project/tree/master/Chapter_03-Advanced_Ruby/serialization_and_files)
+    - Jumpstart Lab's Event Manager
+    - Hangman game (another of my faves!)
+- [Ruby on the Web](https://github.com/craftykate/odin-project/tree/master/Chapter_03-Advanced_Ruby/ruby_on_the_web)
+    - Jumpstart Lab's Twitter client
+    - Build a Ruby web server
+- [Recursion](https://github.com/craftykate/odin-project/tree/master/Chapter_03-Advanced_Ruby/recursion)
+    - Write a Fibonacci Sequence program using iteration and again recursively
+    - Merge Sort, recursively
+- [Basic Data Structures and Algorithms](https://github.com/craftykate/odin-project/tree/master/Chapter_03-Advanced_Ruby/data_structures_and_algorithms)
+    - Build and search a binary tree
+    - Find the shortest path a knight would travel to get from one spot on a chess board to another
+- [Testing with RSpec](https://github.com/craftykate/odin-project/tree/master/Chapter_03-Advanced_Ruby/testing_with_rspec)
+    - Go back and write tests for Caesar Cipher, enumerable methods and Tic Tac Toe
+    - Build a Connect Four game using TDD
+- [Chess: Final Ruby Project](https://github.com/craftykate/odin-project/tree/master/Chapter_03-Advanced_Ruby/chess)
+    - Write a command line chess game
