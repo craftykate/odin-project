@@ -8,26 +8,26 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 
 **HTML**
 
-- [Recreate Google's Homepage](https://github.com/craftykate/odin-project/tree/master/ch02_google_homepage)
+- [Recreate Google's Homepage](https://github.com/craftykate/odin-project/tree/master/Chapter_02-Web_Development_101/ch02_google_homepage)
 	- Using HTML and CSS, recreate google's search page
 
 **Ruby**
 
-- [Test First Ruby](https://github.com/craftykate/odin-project/tree/master/ch02_test_first_ruby)
+- [Test First Ruby](https://github.com/craftykate/odin-project/tree/master/Chapter_02-Web_Development_101/ch02_test_first_ruby)
 	- Do the TDD programs from Test First Ruby
 
 **JavaScript**
 
-- [Euler in JavaScript](https://github.com/craftykate/odin-project/tree/master/ch02_euler_in_javascript)
+- [Euler in JavaScript](https://github.com/craftykate/odin-project/tree/master/Chapter_02-Web_Development_101/ch02_euler_in_javascript)
 	- Multiples of 3 and 5
 	- Even Fibonacci Numbers
 	- Largest Prime Factor
-- [Etch-a-sketch in JavaScript](https://github.com/craftykate/odin-project/tree/master/ch02_etch_a_sketch)
+- [Etch-a-sketch in JavaScript](https://github.com/craftykate/odin-project/tree/master/Chapter_02-Web_Development_101/ch02_etch_a_sketch)
 	- Build a browser etch-a-sketch/drawing board
 
 **Rails**
 
-- [Rails Blog](https://github.com/craftykate/odin-project/tree/master/ch02_rails_blog)
+- [Rails Blog](https://github.com/craftykate/odin-project/tree/master/Chapter_02-Web_Development_101/ch02_rails_blog)
 	- Follow along with Jumpstart Labs' tutorial to build a blog
 
 ### Chapter 03 - Advanced Ruby
