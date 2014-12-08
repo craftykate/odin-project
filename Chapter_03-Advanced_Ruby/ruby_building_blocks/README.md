@@ -4,7 +4,7 @@ Project Source: http://www.theodinproject.com/ruby-programming/building-blocks
 
 ## Caesar Cipher
 
-[caesar.rb](https://github.com/craftykate/odin-project/blob/master/Chapter_03-Advanced_Ruby/ch03_ruby_building_blocks/ceasar.rb)
+[caesar.rb](https://github.com/craftykate/odin-project/blob/master/Chapter_03-Advanced_Ruby/ruby_building_blocks/ceasar.rb)
 
 Implement a caesar cipher that takes in a string and the shift factor and then outputs the modified string:
 
@@ -15,7 +15,7 @@ Implement a caesar cipher that takes in a string and the shift factor and then o
 
 ## Stock Picker
 
-[stocks.rb](https://github.com/craftykate/odin-project/blob/master/Chapter_03-Advanced_Ruby/ch03_ruby_building_blocks/stocks.rb)
+[stocks.rb](https://github.com/craftykate/odin-project/blob/master/Chapter_03-Advanced_Ruby/ruby_building_blocks/stocks.rb)
 
 Implement a method #stock_picker that takes in an array of stock prices, one for each hypothetical day. It should return a pair of days representing the best day to buy and the best day to sell. Days start at 0.
 
@@ -26,7 +26,7 @@ Implement a method #stock_picker that takes in an array of stock prices, one for
 
 ## Substrings
 
-[substrings.rb](https://github.com/craftykate/odin-project/blob/master/Chapter_03-Advanced_Ruby/ch03_ruby_building_blocks/substrings.rb)
+[substrings.rb](https://github.com/craftykate/odin-project/blob/master/Chapter_03-Advanced_Ruby/ruby_building_blocks/substrings.rb)
 
 Implement a method #substrings that takes a word as the first argument and then an array of valid substrings (your dictionary) as the second argument. It should return a hash listing each substring (case insensitive) that was found in the original string and how many times it was found.
 

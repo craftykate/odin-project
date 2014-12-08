@@ -4,7 +4,7 @@ Project source: http://www.theodinproject.com/ruby-programming/ruby-on-the-web
 
 ## Twitter Spambot
 
-[twitter_spambot](https://github.com/craftykate/odin-project/tree/master/Chapter_03-Advanced_Ruby/ch03_ruby_on_the_web/twitter_spambot)
+[twitter_spambot](https://github.com/craftykate/odin-project/tree/master/Chapter_03-Advanced_Ruby/ruby_on_the_web/twitter_spambot)
 
 1. Do [this project/tutorial from Jumpstart Lab](http://tutorials.jumpstartlab.com/projects/microblogger.html). It will take you through how to authenticate with Twitter and start tweeting.
 
@@ -12,7 +12,7 @@ Project source: http://www.theodinproject.com/ruby-programming/ruby-on-the-web
 
 ## Build a Ruby Web Server
 
-[ruby_server](https://github.com/craftykate/odin-project/tree/master/Chapter_03-Advanced_Ruby/ch03_ruby_on_the_web/ruby_server)
+[ruby_server](https://github.com/craftykate/odin-project/tree/master/Chapter_03-Advanced_Ruby/ruby_on_the_web/ruby_server)
 
 **I did the basic version of this, but not the full version**
 

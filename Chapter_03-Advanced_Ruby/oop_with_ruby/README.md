@@ -4,7 +4,7 @@ Project Source: http://www.theodinproject.com/ruby-programming/oop
 
 ## Tic Tac Toe
 
-[tic_tac_toe.rb](https://github.com/craftykate/odin-project/blob/master/Chapter_03-Advanced_Ruby/ch03_oop_with_ruby/tic_tac_toe.rb)
+[tic_tac_toe.rb](https://github.com/craftykate/odin-project/blob/master/Chapter_03-Advanced_Ruby/oop_with_ruby/tic_tac_toe.rb)
 
 Build a tic-tac-toe game on the command line where two human players can play against each other and the board is displayed in between turns.
 
@@ -14,7 +14,7 @@ Build a tic-tac-toe game on the command line where two human players can play ag
 
 ## Mastermind
 
-[mastermind.rb](https://github.com/craftykate/odin-project/blob/master/Chapter_03-Advanced_Ruby/ch03_oop_with_ruby/mastermind.rb)
+[mastermind.rb](https://github.com/craftykate/odin-project/blob/master/Chapter_03-Advanced_Ruby/oop_with_ruby/mastermind.rb)
 
 Build a Mastermind game from the command line where you have 12 turns to guess the secret code, starting with you guessing the computer's random code.
 
