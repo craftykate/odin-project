@@ -1,0 +1,23 @@
+<h1><%= @article.title %> </h1><%= link_to "Home", articles_path, class: "new_article" %>
+<% post_time = @article.created_at %>
+<p>Posted <%= distance_of_time_in_words(Time.now, post_time) %> ago on <%=post_time.strftime("%b %d, %Y at %I:%M %p") %></p><br/>
+<p>
+	Tags:
+	<% @article.tags.each do |tag| %>
+		<%= link_to tag.name, tag_path(tag) %>
+	<% end %>
+</p><br/>
+<p>
+	<% if @article.image.exists? %>
+		<%= image_tag @article.image.url %>
+	<% end %>
+</p>
+<p><%= @article.body %></p><br/>
+<% if logged_in? %>
+	<%= link_to "edit", edit_article_path(@article) %>
+	<%= link_to "delete", article_path(@article), method: :delete, data: { confirm: "Delete article?" } %>
+<% end %>
+<h3>Comments (<%= @article.comments.size %>)</h3>
+<%= render partial: 'articles/comment', collection: @article.comments %>
+<%= render partial: 'comments/form' %>
+<%= link_to "<< Back to Articles List", articles_path %>

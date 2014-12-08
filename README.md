@@ -27,7 +27,7 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 
 **Rails**
 
-- [Rails Blog](https://github.com/craftykate/odin-project/tree/master/Chapter_02-Web_Development_101/ch02_rails_blog)
+- [Rails Blog](https://github.com/craftykate/odin-project/tree/master/Chapter_02-Web_Development_101/ch02_jumpstart_rails_blog)
 	- Follow along with Jumpstart Labs' tutorial to build a blog
 
 ### Chapter 03 - Advanced Ruby
