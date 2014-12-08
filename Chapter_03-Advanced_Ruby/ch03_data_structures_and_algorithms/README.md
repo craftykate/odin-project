@@ -4,7 +4,7 @@ Project source: http://www.theodinproject.com/ruby-programming/data-structures-a
 
 ## Searching Binary Trees
 
-[binary_search_tree](https://github.com/craftykate/odin-project/tree/master/ch03_data_structures_and_algorithms/binary_search_tree.rb)
+[binary_search_tree](https://github.com/craftykate/odin-project/tree/master/Chapter_03-Advanced_Ruby/ch03_data_structures_and_algorithms/binary_search_tree.rb)
 
 You'll build a simple binary tree data structure from some arbitrary input and also the "crawler" function that will locate data inside of it.
 
@@ -21,7 +21,7 @@ You'll build a simple binary tree data structure from some arbitrary input and a
 
 	## Knight's Travails
 
-[knight_moves](https://github.com/craftykate/odin-project/tree/master/ch03_data_structures_and_algorithms/knight_moves.rb)
+[knight_moves](https://github.com/craftykate/odin-project/tree/master/Chapter_03-Advanced_Ruby/ch03_data_structures_and_algorithms/knight_moves.rb)
 
 Your task is to build a function knight_moves that shows the simplest possible way to get from one square to another by outputting all squares the knight will stop on along the way.
 

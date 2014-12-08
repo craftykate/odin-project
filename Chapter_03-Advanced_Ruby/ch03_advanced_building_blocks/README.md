@@ -4,7 +4,7 @@ Project Source: http://www.theodinproject.com/ruby-programming/advanced-building
 
 ## Bubble Sort
 
-[bubble_sort.rb](https://github.com/craftykate/odin-project/blob/master/ch03_advanced_building_blocks/bubble_sort.rb)
+[bubble_sort.rb](https://github.com/craftykate/odin-project/blob/master/Chapter_03-Advanced_Ruby/ch03_advanced_building_blocks/bubble_sort.rb)
 
 Build a method #bubble_sort that takes an array and returns a sorted array. It must use the bubble sort methodology (using #sort would be pretty pointless, wouldn't it?).
 
@@ -15,7 +15,7 @@ Build a method #bubble_sort that takes an array and returns a sorted array. It m
 
 ## Bubble Sort By
 
-[bubble_sort_by.rb](https://github.com/craftykate/odin-project/blob/master/ch03_advanced_building_blocks/bubble_sort_by.rb)
+[bubble_sort_by.rb](https://github.com/craftykate/odin-project/blob/master/Chapter_03-Advanced_Ruby/ch03_advanced_building_blocks/bubble_sort_by.rb)
 
 Now create a similar method called #bubble_sort_by which sorts an array but accepts a block. The block should take two arguments which represent the two elements currently being compared. Expect that the block's return will be similar to the spaceship operator you learned about before -- if the result of the block is negative, the element on the left is "smaller" than the element on the right. 0 means they are equal. A positive result means the right element is greater. Use this to sort your array.
 
@@ -28,7 +28,7 @@ Now create a similar method called #bubble_sort_by which sorts an array but acce
 
 ## Enumerable Methods
 
-[enumerables.rb](https://github.com/craftykate/odin-project/blob/master/ch03_advanced_building_blocks/enumerables.rb)
+[enumerables.rb](https://github.com/craftykate/odin-project/blob/master/Chapter_03-Advanced_Ruby/ch03_advanced_building_blocks/enumerables.rb)
 
 You learned about the Enumerable module that gets mixed in to the Array and Hash classes (among others) and provides you with lots of handy iterator methods. To prove that there's no magic to it, you're going to rebuild those methods.
 
