@@ -2,6 +2,8 @@
 .sass-cache
 _reset.scss
 tasks.todo
-ch03_serialization_and_files/hangman/hangman_saves.csv
-ch02_etch_a_sketch/style.scss
-ch02_etch_a_sketch/_reset.scss
+serialization_and_files/hangman/hangman_saves.csv
+etch_a_sketch/style.scss
+etch_a_sketch/_reset.scss
+sample_rails_app/log/
+microblog/log/
