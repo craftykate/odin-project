@@ -29,6 +29,7 @@ GEM
       tzinfo (~> 1.1)
     ansi (1.4.3)
     arel (5.0.1.20140414130214)
+    bcrypt (3.1.7)
     binding_of_caller (0.7.3.pre1)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.2.0.0)
@@ -171,6 +172,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (= 3.1.7)
   bootstrap-sass (= 3.2.0.0)
   byebug (= 3.4.0)
   coffee-rails (~> 4.0.0)
