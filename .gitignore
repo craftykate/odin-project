@@ -5,5 +5,6 @@ tasks.todo
 serialization_and_files/hangman/hangman_saves.csv
 etch_a_sketch/style.scss
 etch_a_sketch/_reset.scss
-log/.keep
-log/development.log
+**/log/.keep
+**/log/development.log
+**/log/test.log
