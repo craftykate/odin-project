@@ -6,3 +6,5 @@
     - Build Hartl's main project in his book - a microblog website
 - [Micro-Reddit](https://github.com/craftykate/odin-project/tree/master/Chapter_04-Advanced_Rails/micro-reddit)
     - Build a very simple Reddit site
+- [Rails Forms](https://github.com/craftykate/odin-project/tree/master/Chapter_04-Advanced_Rails/forms)
+    - Practice building forms in rails
