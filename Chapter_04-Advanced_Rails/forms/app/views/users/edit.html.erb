@@ -1,0 +1,29 @@
+<div id="header"><h1>Forms!</h1></div>
+
+<div id="content">
+	<%= form_for @user do |f| %>
+		<%= field_set_tag 'Edit User' do %>
+		<ul class = "errors">
+			<% @user.errors.full_messages.each do |error| %>
+				<li><%= error %></li>
+			<% end %>
+		</ul>
+			<div>
+				<%= f.label :username, 'Username:' %>
+				<%= f.text_field :username, class: "style" %>
+			</div>
+			<div>
+				<%= f.label :email, 'Email:' %>
+				<%= f.email_field :email, class: "style" %>
+			</div>
+			<div>
+				<%= f.label :password, 'Password:' %>
+				<%= f.password_field :password, class: "style" %>
+			</div>
+			<div class="submit">
+				<%= f.submit 'Update User' %>
+			</div>
+		<% end %>
+	<% end %>
+
+</div>

@@ -1,0 +1,231 @@
+@import 'reset'; //Resets styles to be uniform across browsers
+
+
+//*============MIXINS============*/
+	
+	//Rounds all corners the same. Default set.
+	//ex: @include round; for default
+	//or ex: @includ round(20px);
+	@mixin round($curve: 10px) {
+		-webkit-border-radius: $curve;
+		border-radius: $curve;
+		-o-border-radius: $curve;
+		-ms-border-radius: $curve;
+		-moz-border-radius: $curve;
+	}
+	
+	//Applies boxshodow to element. Default set.
+	//ex: @include boxshadow; for default
+	//ex: @include boxshadow(.30, 0px, 0px, 7px, 1px); to set each variable
+	@mixin boxshadow ($trans: .30, $horshad: 0px, $vershad: 0px, $blurshad: 7px, $spreadshad: 1px){
+		-webkit-box-shadow:rgba(0, 0, 0, $trans) $horshad $vershad $blurshad $spreadshad;
+		box-shadow:rgba(0, 0, 0, $trans) $horshad $vershad $blurshad $spreadshad;
+		-o-box-shadow:rgba(0, 0, 0, $trans) $horshad $vershad $blurshad $spreadshad;
+		-ms-box-shadow:rgba(0, 0, 0, $trans) $horshad $vershad $blurshad $spreadshad;
+		-moz-box-shadow:rgba(0, 0, 0, $trans) $horshad $vershad $blurshad $spreadshad;
+	}
+
+//*============END MIXINS============*/
+
+
+//*============DEFINE COLORS============*/
+
+	$text: #545252;
+//*============END DEFINE COLORS============*/
+
+
+//*============TEXT STYLING============*/
+	//Sets text by type
+	//ex: @include setfont(menu); for menu text
+	//MUST add each font to head.php like this: 
+	//		<!--Quicksand - text-->
+	//		<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+	@mixin setfont($type) {
+		@if $type == text {
+			font: {
+				family: Arial, Helvetica, sans-serif;
+			}
+		}
+	}	
+
+	body {
+		@include setfont(text);
+		font-size: 1em;
+		color: $text;
+	}	
+
+	ul, p {
+		line-height:150%;
+		text-align:justify;
+	}	
+
+	p {
+		margin-bottom: 1em;
+	}	
+
+	a, a:visited {
+		&:hover, &:focus, &:active {
+		}
+	}	
+
+	i, em {
+		font-style:italic;
+	}	
+
+	strong {
+		font-weight:bold;
+	}	
+
+	.oops {
+		color: red; 
+	}
+//*============END TEXT STYLING============*/
+
+
+//*============MAIN PAGE ELEMENTS============*/
+	body {
+		position:relative; 
+		margin: 0 auto;
+	}	
+
+	#wrapper {
+		width: 680px;
+		margin: 0 auto;
+	}
+
+	.clear {
+		clear:both;
+	}
+//*============END MAIN PAGE ELEMENTS============*/
+
+//*============HEADER============*/
+	#header {
+		padding: 20px;
+		h1 {
+			font-size: 2em;
+		}
+		ul {
+			text-align: center;
+			li {
+				display: inline;
+			}
+		}
+	}
+//*============END HEADER============*/
+
+//*============SIDEBAR============*/
+
+//*============END SIDEBAR============*/
+
+//*============CONTENT============*/
+	#content {
+		width: 100%;
+		padding: 20px;
+	}
+//*============END CONTENT============*/
+
+//*============FORMS============*/
+	form {
+		margin: 30px auto;
+		width: 90%;
+		padding: 20px;
+		@include round(20px);
+		@include boxshadow;
+		fieldset {
+			legend {
+				font-size: 130%;
+				margin-bottom: 10px;
+			}
+			div:not([class=radio]):not([class=checkbox]):not([class=field_with_errors]) {
+				clear: both;
+				padding-top: 10px;
+			}
+			label {
+				float: left;
+				width: 40%;
+				text-align: right;
+				padding-right: 10px;
+				display: block;
+				margin-top: 7px;
+			}
+			input.style {
+				width: 50%;
+				height: 20px;
+			}
+			textarea {
+				width: 50%;
+				height: 100px;
+			}
+			.radio, .checkbox {
+				display: block;
+				float: left;
+				width: 50%;
+			}
+			.radio input, .checkbox input{
+				display: inline-block;
+				position: relative;
+				margin-right: 8px;
+				top: -2px;
+			}
+			input.style, textarea{
+				@include round;
+				padding: 5px;
+				border: 1px solid gray;
+				-webkit-box-shadow:rgb(145, 145, 145) 5px 5px 5px -5px inset;
+				box-shadow:rgb(145, 145, 145) 5px 5px 5px -5px inset;
+				-o-box-shadow:rgb(145, 145, 145) 5px 5px 5px -5px inset;
+				-ms-box-shadow:rgb(145, 145, 145) 5px 5px 5px -5px inset;
+				-moz-box-shadow:rgb(145, 145, 145) 5px 5px 5px -5px inset;
+				&:focus {
+					outline-style:none;
+					outline-width:initial;
+					outline-color:#000000;	
+					-webkit-box-shadow:rgb(145, 145, 145) 5px 5px 5px -5px inset, rgb(145, 145, 145) 0px 0px 3px 1px;
+					box-shadow:rgb(145, 145, 145) 5px 5px 5px -5px inset, rgb(145, 145, 145) 0px 0px 3px 1px;
+					-o-box-shadow:rgb(145, 145, 145) 5px 5px 5px -5px inset, rgb(145, 145, 145) 0px 0px 3px 1px;
+					-ms-box-shadow:rgb(145, 145, 145) 5px 5px 5px -5px inset, rgb(145, 145, 145) 0px 0px 3px 1px;
+					-moz-box-shadow:rgb(145, 145, 145) 5px 5px 5px -5px inset, rgb(145, 145, 145) 0px 0px 3px 1px;
+				}
+			}
+			.field_with_errors {
+				input {
+					border: 1px solid red;
+				}
+			}
+			.errors {
+				color: red;
+			}
+			.submit {
+				width: 100%;
+				text-align: center;
+				input {
+					cursor: pointer;
+					@include setfont(text);
+				}
+			}
+		}
+	}
+//*============FORMS============*/
+
+//*============FOOTER============*/
+	#footer {
+		background-color: lighten(red, 20%);
+		padding:10px;
+		clear:both;
+		ul {
+			text-align: center;
+		}
+		li {
+			display:inline;
+		}
+		a, a:visited {
+			&:hover, &:focus, &:active { 
+			}
+		}
+	}
+//*============END FOOTER============*/
+
+//*============RESPONSIVE DESIGN CHANGES============*/
+
+	//*----------max-width XXXXpx----------*/
+//*============END RESPONSIVE DESIGN CHANGES============*/

@@ -1,0 +1,92 @@
+<div id="header"><h1>Forms!</h1></div>
+
+<div id="content">
+
+	<!-- html version of the form -->
+
+	<!-- <form action="/users" method="POST" accept-charset="UTF-8">
+		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+		<fieldset>
+			<legend>Add User</legend>
+			<div>
+				<label for="username">Username:</label>
+				<input type="text" name="[user][username]" class="style">
+			</div>
+			<div>
+				<label for="email">Email:</label>
+				<input type="email" name="[user][email]" class="style">
+			</div>
+			<div>
+				<label for="password">Password:</label>
+				<input type="password" name="[user][password]" class="style">
+			</div>
+			<div class="submit">
+				<input type="submit" value="Save User">
+			</div>
+		</fieldset>
+	</form> -->
+
+	
+	<!-- form_tag version of the form -->
+<!-- 
+	<%= form_tag("/users") do %>
+		<fieldset>
+			<legend>Add User</legend>
+			<div>
+				<%= label_tag 'username', 'Username:' %>
+				<%= text_field_tag 'username', nil, class: "style" %>
+			</div>
+			<div>
+				<%= label_tag 'email', 'Email:' %>
+				<%= email_field_tag 'email', nil, class: "style" %>
+			</div>
+			<div>
+				<%= label_tag 'password', 'Password:' %>
+				<%= password_field_tag 'password', nil, class: "style" %>
+			</div>
+			<div class="submit">
+				<%= submit_tag 'Save User' %>
+			</div>
+		</fieldset>
+	<% end %>
+ -->
+	
+	<!-- form_for version of the form -->
+
+	<%= form_for @user do |f| %>
+		<%= field_set_tag 'Add User' do %>
+		<ul class = "errors">
+			<% @user.errors.full_messages.each do |error| %>
+				<li><%= error %></li>
+			<% end %>
+		</ul>
+			<div>
+				<%= f.label :username, 'Username:' %>
+				<%= f.text_field :username, class: "style", :value => "John Smith" %>
+			</div>
+			<div>
+				<%= f.label :email, 'Email:' %>
+				<%= f.email_field :email, :placeholder => "foo@bar.com", class: "style" %>
+			</div>
+			<div>
+				<%= f.label :password, 'Password:' %>
+				<%= f.password_field :password, class: "style" %>
+			</div>
+			<div class="submit">
+				<%= f.submit 'Save User' %>
+			</div>
+		<% end %>
+	<% end %>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
