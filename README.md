@@ -52,12 +52,14 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 
 ### Chapter 04 - Advanced Rails
 
-- [Sample Rails App](https://github.com/craftykate/odin-project/tree/master/Chapter_04-Advanced_Rails/sample_rails_app)
-	- Build a very basic sample Rails app of users and microposts
 - [Microblog App](https://github.com/craftykate/odin-project/tree/master/Chapter_04-Advanced_Rails/microblog_rails)
 	- Build Hartl's main project in his book - a microblog website (Twitter, anyone?)
+- [Sample Rails App](https://github.com/craftykate/odin-project/tree/master/Chapter_04-Advanced_Rails/sample_rails_app)
+	- Build a very basic sample Rails app of users and microposts
 - [Micro-Reddit](https://github.com/craftykate/odin-project/tree/master/Chapter_04-Advanced_Rails/micro-reddit)
 	- Build a very simple Reddit site
 - [Rails Forms](https://github.com/craftykate/odin-project/tree/master/Chapter_04-Advanced_Rails/forms)
 	- Practice building forms in rails
+- [Members Only](https://github.com/craftykate/odin-project/tree/master/Chapter_04-Advanced_Rails/members-only)
+	- Practice building authentication in Rails with a basic posting site
 
