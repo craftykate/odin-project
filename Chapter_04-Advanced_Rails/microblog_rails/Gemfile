@@ -5,6 +5,11 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.6'
 # Hashes passwords
 gem 'bcrypt', '3.1.7'
+# Add sample users to site
+gem 'faker', '1.4.2'
+# Paginate results
+gem 'will_paginate', '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
 # Include Bootstrap
 gem 'bootstrap-sass', '3.2.0.0'
 # Use SCSS for stylesheets
