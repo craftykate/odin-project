@@ -3,10 +3,10 @@
 <%= form_for(:session, url: login_path) do |f| %>
 	<%= field_set_tag 'Log in' do %>
 		<%= f.label :email %>
-		<%= f.email_field :email, class: "style" %>
+		<%= f.email_field :email, placeholder: 'foo@bar.com', class: "style" %>
 		<br><br>
 		<%= f.label :password %>
-		<%= f.password_field :password, class: "style" %>
+		<%= f.password_field :password, placeholder: 'foobar', class: "style" %>
 		
 		<div class="submit">
 			<%= f.submit "Log In", class: "btn" %>
