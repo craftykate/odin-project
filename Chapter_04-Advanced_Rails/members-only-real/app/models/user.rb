@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
 	attr_accessor :remember_token
 
+	has_many :posts, dependent: :destroy
+
 	before_save { self.email = email.downcase }
 	validates :username, 
 						presence: true, 

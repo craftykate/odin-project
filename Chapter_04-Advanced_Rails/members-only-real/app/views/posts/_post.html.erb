@@ -1,0 +1,9 @@
+<div class="post">
+	<% heading = logged_in? ? post.user.username : "Log in to see who " %>
+	<% post_time = post.created_at %>
+	<h2><%= heading %> said:</h2>
+	<div class="post_content">
+		<p><%= post.content %></p>
+		<p class="time">Posted <%= distance_of_time_in_words(Time.now, post_time) %> ago</p>
+	</div>
+</div>

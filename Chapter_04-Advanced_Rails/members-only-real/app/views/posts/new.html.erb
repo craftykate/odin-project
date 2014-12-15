@@ -1,0 +1,12 @@
+<% provide(:title, "Create Post") %>
+
+<%= form_for(@post) do |f| %>
+	<%= field_set_tag 'Create Post' do %>
+		<%= f.label :content, "What do you want to say?" %>
+		<%= f.text_area :content, class: "style" %>
+
+		<div class="submit">
+			<%= f.submit "Save Post", class: "btn" %>
+		</div>
+	<% end %>
+<% end %>
