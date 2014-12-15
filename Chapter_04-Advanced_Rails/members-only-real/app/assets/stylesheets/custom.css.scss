@@ -1,0 +1,293 @@
+@import 'reset'; //Resets styles to be uniform across browsers
+
+
+//*============MIXINS============*/
+	//Rounds corners individually. Default set.
+	//ex: @include rounded; for default
+	//or ex: @include rounded(10px, 10px, 0, 0); for rounded top
+	@mixin rounded($tlcurve: 10px, $trcurve: 10px, $brcurve: 10px, $blcurve: 10px) {
+		-webkit-border-top-left-radius: $tlcurve;
+		border-top-left-radius: $tlcurve;
+		-o-border-top-left-radius: $tlcurve;
+		-ms-border-top-left-radius: $tlcurve;
+		-moz-border-radius-topleft: $tlcurve;
+		-webkit-border-top-right-radius: $trcurve;
+		border-top-right-radius: $trcurve;
+		-o-border-top-right-radius: $trcurve;
+		-ms-border-top-right-radius: $trcurve;
+		-moz-border-radius-topright: $trcurve;
+		-webkit-border-bottom-right-radius: $brcurve;
+		border-bottom-right-radius: $brcurve;
+		-o-border-bottom-right-radius: $brcurve;
+		-ms-border-bottom-right-radius: $brcurve;
+		-moz-border-radius-bottomright: $brcurve;
+		-webkit-border-bottom-left-radius: $blcurve;
+		border-bottom-left-radius: $blcurve;
+		-o-border-bottom-left-radius: $blcurve;
+		-ms-border-bottom-left-radius: $blcurve;
+		-moz-border-radius-bottomleft: $blcurve;
+	}
+	//Rounds all corners the same. Default set.
+	//ex: @include round; for default
+	//or ex: @includ round(20px);
+	@mixin round($curve: 10px) {
+		-webkit-border-radius: $curve;
+		border-radius: $curve;
+		-o-border-radius: $curve;
+		-ms-border-radius: $curve;
+		-moz-border-radius: $curve;
+	}
+	
+	//Applies boxshodow to element. Default set.
+	//ex: @include boxshadow; for default
+	//ex: @include boxshadow(.30, 0px, 0px, 7px, 1px); to set each variable
+	@mixin boxshadow ($trans: .30, $horshad: 0px, $vershad: 0px, $blurshad: 7px, $spreadshad: 1px){
+		-webkit-box-shadow:rgba(0, 0, 0, $trans) $horshad $vershad $blurshad $spreadshad;
+		box-shadow:rgba(0, 0, 0, $trans) $horshad $vershad $blurshad $spreadshad;
+		-o-box-shadow:rgba(0, 0, 0, $trans) $horshad $vershad $blurshad $spreadshad;
+		-ms-box-shadow:rgba(0, 0, 0, $trans) $horshad $vershad $blurshad $spreadshad;
+		-moz-box-shadow:rgba(0, 0, 0, $trans) $horshad $vershad $blurshad $spreadshad;
+	}
+
+//*============END MIXINS============*/
+
+
+//*============DEFINE COLORS============*/
+
+	$text: #545252;
+	$main: #E6A637;
+	$accent: #A637E6;
+//*============END DEFINE COLORS============*/
+
+
+//*============TEXT STYLING============*/
+	//Sets text by type
+	//ex: @include setfont(menu); for menu text
+	//MUST add each font to head.php like this: 
+	//		<!--Quicksand - text-->
+	//		<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+	@mixin setfont($type) {
+		@if $type == text {
+			font: {
+				family: Arial, Helvetica, sans-serif;
+			}
+		}
+	}	
+
+	body {
+		@include setfont(text);
+		font-size: 1em;
+		color: $text;
+	}	
+
+	ul, p {
+		line-height:150%;
+		text-align:justify;
+	}	
+
+	p {
+		margin-bottom: 1em;
+	}	
+
+	a, a:visited {
+		color: $main;
+		text-decoration: none;
+		&:hover, &:focus, &:active {
+			text-decoration: underline;
+		}
+	}	
+
+	i, em {
+		font-style:italic;
+	}	
+
+	strong {
+		font-weight:bold;
+	}	
+
+	.oops {
+		color: red; 
+	}
+//*============END TEXT STYLING============*/
+
+
+//*============MAIN PAGE ELEMENTS============*/
+	body {
+		position:relative; 
+		margin: 0 auto;
+	}	
+
+	#wrapper {
+		width: 680px;
+		margin: 20px auto;
+		@include round(20px);
+		@include boxshadow;
+	}
+
+	.clear {
+		clear:both;
+	}
+
+	.btn {
+	  background: #E6A637;
+	  background-image: -webkit-linear-gradient(top, #E6A637, #ebc27b);
+	  background-image: -moz-linear-gradient(top, #E6A637, #ebc27b);
+	  background-image: -ms-linear-gradient(top, #E6A637, #ebc27b);
+	  background-image: -o-linear-gradient(top, #E6A637, #ebc27b);
+	  background-image: linear-gradient(to bottom, #E6A637, #ebc27b);
+	  -webkit-border-radius: 14;
+	  -moz-border-radius: 14;
+	  border-radius: 14px;
+	  color: #fff;
+	  padding: 10px 20px 10px 20px;
+	  text-decoration: none;
+	  border: none;
+	  &:hover {
+		  background: #ebc27b;
+		  background-image: -webkit-linear-gradient(top, #ebc27b, #E6A637);
+		  background-image: -moz-linear-gradient(top, #ebc27b, #E6A637);
+		  background-image: -ms-linear-gradient(top, #ebc27b, #E6A637);
+		  background-image: -o-linear-gradient(top, #ebc27b, #E6A637);
+		  background-image: linear-gradient(to bottom, #ebc27b, #E6A637);
+		  text-decoration: none;
+	  }
+	}
+
+//*============END MAIN PAGE ELEMENTS============*/
+
+//*============HEADER============*/
+	header {
+		border-bottom: 1px solid $main;
+		padding: 20px;
+		h1 {
+			font-size: 2em;
+			display: inline;
+		}
+		ul {
+			top: 4px;
+			position: relative;
+			float: right;
+			text-align: center;
+			li {
+				display: inline;
+			}
+		}
+	}
+//*============END HEADER============*/
+
+//*============SIDEBAR============*/
+
+//*============END SIDEBAR============*/
+
+//*============CONTENT============*/
+	#content {
+		padding: 20px;
+		.alert {
+			&.error {
+				color: $accent;
+			}
+		}
+	}
+//*============END CONTENT============*/
+
+//*============FORMS============*/
+	form {
+		margin: 30px auto 0 auto;
+		width: 90%;
+		padding: 20px;
+		fieldset {
+			legend {
+				font-size: 130%;
+				margin-bottom: 10px;
+			}
+			div:not([class=radio]):not([class=checkbox]):not([class=field_with_errors]) {
+				clear: both;
+				padding-top: 10px;
+			}
+			label {
+				float: left;
+				width: 40%;
+				text-align: right;
+				padding-right: 10px;
+				display: block;
+				margin-top: 10px;
+			}
+			input.style {
+				width: 50%;
+				height: 20px;
+			}
+			textarea {
+				width: 50%;
+				height: 100px;
+			}
+			.radio, .checkbox {
+				display: block;
+				float: left;
+				width: 50%;
+			}
+			.radio input, .checkbox input{
+				display: inline-block;
+				position: relative;
+				margin-right: 8px;
+				top: -2px;
+			}
+			input.style, textarea{
+				@include round;
+				padding: 5px;
+				border: 1px solid gray;
+				&:focus {
+					outline-style:none;
+					outline-width:initial;
+					outline-color:#000000;	
+					-webkit-box-shadow:rgb(145, 145, 145) 5px 5px 5px -5px inset, rgb(145, 145, 145) 0px 0px 3px 1px;
+					box-shadow:rgb(145, 145, 145) 5px 5px 5px -5px inset, rgb(145, 145, 145) 0px 0px 3px 1px;
+					-o-box-shadow:rgb(145, 145, 145) 5px 5px 5px -5px inset, rgb(145, 145, 145) 0px 0px 3px 1px;
+					-ms-box-shadow:rgb(145, 145, 145) 5px 5px 5px -5px inset, rgb(145, 145, 145) 0px 0px 3px 1px;
+					-moz-box-shadow:rgb(145, 145, 145) 5px 5px 5px -5px inset, rgb(145, 145, 145) 0px 0px 3px 1px;
+				}
+			}
+			.field_with_errors {
+				input {
+					border: 1px solid red;
+				}
+			}
+			.errors {
+				color: red;
+			}
+			.submit {
+				width: 100%;
+				text-align: center;
+				margin-top: 20px;
+				input {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+//*============FORMS============*/
+
+//*============FOOTER============*/
+	footer {
+		background-color: $main;
+		padding:10px;
+		clear:both;
+		color: white;
+		@include rounded(0,0,20px,20px);
+		ul {
+			li.center {
+				text-align: center;
+			}
+		}
+		a, a:visited {
+			color: white;
+			text-decoration: underline;
+			&:hover, &:focus, &:active { 
+			}
+		}
+	}
+//*============END FOOTER============*/
+
+//*============RESPONSIVE DESIGN CHANGES============*/
+
+	//*----------max-width XXXXpx----------*/
+//*============END RESPONSIVE DESIGN CHANGES============*/
