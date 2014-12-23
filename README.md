@@ -62,4 +62,6 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 	- Practice building forms in rails
 - [Members Only](https://github.com/craftykate/odin-project/tree/master/Chapter_04-Advanced_Rails/members-only)
 	- Practice building authentication in Rails with a basic posting site
+- [Private Events](https://github.com/craftykate/odin-project/tree/master/Chapter_04-Advanced_Rails/private_events)
+	- Build a basic replica of Eventbrite where users can log in, create events and sign up to attend events
 
