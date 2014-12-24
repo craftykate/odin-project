@@ -1,0 +1,14 @@
+<%= link_to event_path(event), class: "event_link" do %>
+	<div class="event">
+		<p><strong>Where: </strong><%= event.event_location %></p>
+		<p><strong>What: </strong><%= event.title %></p>
+		<% t = event.event_date %>
+		<p><strong>When: </strong><%= t.strftime("%a, %b %d, %Y at %I:%M %p") %></p>
+		<p><strong>Host: </strong><%= event.creator.username %></p>
+		<% if event.attendees.include?(current_user) %>
+			<% if t > Time.now %>
+				<span class="main">You are attending this event!</span>
+			<% end %>
+		<% end %>
+	</div>
+<% end %>

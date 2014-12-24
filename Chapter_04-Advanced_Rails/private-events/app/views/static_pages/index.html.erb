@@ -1,0 +1,33 @@
+<% if logged_in? %>
+  <main>
+
+    <% if @events.future.any? %>
+      <h2>Upcoming Events:</h2>
+      <p>Click an event to see details and sign up to attend!</p>
+      <%= render @events.future %>
+    <% else %>
+      <h2>No Upcoming Events!</h2>
+      <p>Why not <%= link_to "create one", new_event_path %>?</p>
+    <% end %>
+
+    <% if @events.past.any? %>
+      <h2>Previous Events:</h2>
+      <p>Click an event to see details and who attended.</p>
+      <% @events.past.each do |event| %>
+        <% t = event.event_date %>
+        <p><%= link_to "#{event.title} hosted by #{event.creator.username} on #{t.strftime("%b %d, %Y")}", event_path(event) %></p>
+      <% end %>
+    <% end %>
+  </main>
+<% else %>
+  <section class="info">
+    <h2>sign up for the app</h2>
+    <p>
+      Sign up to see the events! Members can create events and register for events others have created.<br/>
+      Have an account? <%= link_to "log in", login_path %> here.
+      <div class="signup">
+        <%= link_to "sign up", new_user_path %>
+      </div>
+    </p>
+  </section>
+<% end %>

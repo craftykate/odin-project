@@ -1,0 +1,42 @@
+<% provide(:title, "Event details") %>
+
+<main>
+	<h2><%= @event.title %></h2>
+	<p>
+		<strong>Where: </strong><%= @event.event_location %><br/>
+		<% t = @event.event_date %>
+		<strong>When: </strong><%= t.strftime("%a, %b %d, %Y at %I:%M %p") %>
+		~ <span class="main">
+			<% if t > Time.now %>
+			 	<%= time_ago_in_words(t) %> away
+			<% else %>
+				event over!
+			<% end %>
+		</span><br/>
+		<strong>Host: </strong><%= @event.creator.username %><br/>
+		<strong>Details: </strong> <%= @event.description %><br/>
+		<strong>Attendees: </strong><br/>
+
+		
+		<% if @event.attendees.any? %>
+			<% @event.attendees.each_with_index do |a, i| %>
+				<span class="attendee"><%= i + 1 %>. <%= a.username %></span> <br/>
+			<% end %>
+		<% else %>
+			No attendees
+		<% end %><br/>
+
+		<% if t > Time.now %>
+			<% if @event.attendees.include?(current_user) %>
+				<br/><span class="main">You are attending this event!</span>
+			<% else %>
+				<%= form_for(current_user.event_attendees.build(attended_event_id: @event.id), :html => {class: "just_button"}) do |f| %>
+					<%= f.hidden_field :attended_event_id %>
+					<div class="submit">
+						<%= f.submit "Attend!" %>
+					</div>
+				<% end %>
+			<% end %>
+		<% end %>
+	</p>
+</main>

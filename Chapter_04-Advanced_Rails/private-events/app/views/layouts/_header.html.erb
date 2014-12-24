@@ -1,0 +1,20 @@
+<header>
+  <h1><%= link_to "Private Events", root_url %></h1>
+  <% if logged_in? %>
+    <nav>
+      <ul>
+        <li>Logged in as <%= current_user.username %></li>
+        <li><%= link_to "your events", user_path(current_user)  %></li>
+        <li><%= link_to "create event", new_event_path %></li>
+        <li><%= link_to "all events", root_path %></li>
+        <li><%= link_to "log out", logout_path, method: "delete"  %></li>
+      </ul>
+    </nav>
+  <% else %>
+    <nav>
+      <ul>
+        <li><%= link_to "log in", login_path %></li>
+      </ul>
+    </nav>
+  <% end %>
+</header>

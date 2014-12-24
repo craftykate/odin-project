@@ -1,0 +1,34 @@
+<% provide(:title, @user.username) %>
+
+<% if @user == current_user %>
+	<% @name = "you" %>
+	<% @verb = "are" %>
+<% else %>
+	<% @name = @user.username %>
+	<% @verb = "is" %>
+<% end %>
+
+<main>
+
+	<% if @user.created_events.future.any? %>
+		<h2>Upcoming Events Hosted by <%= @name.capitalize %>:</h2>
+		<p>Click an event to see details and sign up to attend!</p>
+		<%= render @user.created_events.future %>
+	<% else %>
+		<p>No Upcoming Events Hosted by <%= @name.capitalize %></p>
+	<% end %>
+
+	<% if @user.attended_events.any? %>
+		<h2>Upcoming Events <%= @name.capitalize + " " + @verb %> Attending:</h2>
+		<%= render @user.attended_events.future %>
+	<% end %>
+
+	<% if @user.created_events.past.any? %>
+		<h2>Previous Events Hosted by <%= @name.capitalize %>:</h2>
+		<p>Click an event to see details and who attended.</p>
+		<% @user.created_events.past.each do |event| %>
+			<% t = event.event_date %>
+			<p><%= link_to "#{event.title} on #{t.strftime("%b %d, %Y")}", event_path(event) %></p>
+		<% end %>
+	<% end %>
+</main>

@@ -1,0 +1,29 @@
+<% provide(:title, 'Sign up') %>
+
+<%= form_for @user do |f| %>
+  <h2>Sign Up <span>Please fill in all fields.</span></h2>
+
+  <% if @user.errors.any? %>
+    <ul class = "errors">
+      <% @user.errors.full_messages.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <%= f.label :username, 'Your Name:' %>
+  <%= f.text_field :username %>
+
+  <%= f.label :email, 'Your Email:' %>
+  <%= f.text_field :email %>
+
+  <%= f.label :password, 'Password:' %>
+  <%= f.password_field :password %>
+
+  <%= f.label :password_confirmation, 'Confirm Password:' %>
+  <%= f.password_field :password_confirmation %>
+
+  <div class="submit">
+    <%= f.submit 'Save' %>
+  </div>
+<% end %>

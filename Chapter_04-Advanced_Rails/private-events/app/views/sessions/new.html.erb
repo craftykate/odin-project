@@ -1,0 +1,19 @@
+<% provide(:title, "Log in") %>
+
+<%= form_for(:session, url: login_path) do |f| %>
+  <h2>Log In</h2>
+  <%= f.label :email,  'Email:' %>
+  <%= f.email_field :email %>
+
+  <%= f.label :password,  'Password:' %>
+  <%= f.password_field :password %>
+
+	<%= f.label :remember_me do %>
+		<%= f.check_box :remember_me %>
+		<span>Remember me on this computer</span>
+	<% end %>
+
+  <div class="submit">
+    <%= f.submit "Log In" %>
+  </div>
+<% end %>

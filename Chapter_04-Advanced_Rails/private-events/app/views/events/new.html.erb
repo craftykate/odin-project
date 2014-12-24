@@ -1,0 +1,29 @@
+<% provide(:title, "Create event") %>
+
+<%= form_for @event do |f| %>
+	<h2>Create Event</h2>
+	<% if @event.errors.any? %>
+		<ul class = "errors">
+			<% @event.errors.full_messages.each do |error| %>
+				<li><%= error %></li>
+			<% end %>
+		</ul>
+	<% end %>
+
+	<%= f.label :title, "Event Title:" %>
+	<%= f.text_field :title, placeholder: "Jenny's birthday" %>
+
+	<%= f.label :event_location, "Location:" %>
+	<%= f.text_field :event_location, placeholder: "Bob's house" %>
+
+	<%= f.label :description, "Event Description:" %>
+	<%= f.text_area :description, placeholder: "Optional - add details like what to bring or wear" %>
+
+	<%= f.label :event_date, "Date:" %>
+	<%= f.datetime_select :event_date, ampm: true, default: DateTime.tomorrow + 12.hours %>
+
+	<div class="submit">
+		<%= f.submit "Create Event" %>
+	</div>
+
+<% end %>
