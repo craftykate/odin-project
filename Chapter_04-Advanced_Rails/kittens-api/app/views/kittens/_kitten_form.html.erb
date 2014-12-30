@@ -1,0 +1,31 @@
+<%= form_for @kitten do |f| %>
+	<h2><%= object %> Kitten
+		<span>Fill in all fields</span></h2>
+  <% if @kitten.errors.any? %>
+    <% flash.now[:error] = "What are you doing?! Fill in all fields!" %>
+    <ul class = "errors">
+      <% @kitten.errors.full_messages.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <%= f.label :name, "Kitten's Name:" %>
+  <%= f.text_field :name %>
+
+  <%= f.label :age, "Kitten's Age:" %>
+  <%= f.select :age, options_for_select(1..20, @kitten.age) %>
+
+	<br/>
+  <%= f.label :cuteness, "Kitten's Cuteness:" %>
+  <%= f.text_field :cuteness %>
+
+  <%= f.label :softness, "Kitten's Softness:" %>
+  <%= f.text_field :softness %>
+
+  <div class="submit">
+  	<%= f.submit "Save Kitten" %>
+  </div>
+  <% if object != "Add a" %>
+    <p><%= link_to "edit", edit_kitten_path(@kitten) %> | <%= link_to "delete", @kitten, method: :delete, data: {confirm: "Delete kitten?"} %></p>
+  <% end %>
+<% end %>
