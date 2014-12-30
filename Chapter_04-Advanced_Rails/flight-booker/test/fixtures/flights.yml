@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_location: MyString
+  end_location: MyString
+  start_time: 2014-12-24 12:47:09
+  duration: 1
+
+two:
+  start_location: MyString
+  end_location: MyString
+  start_time: 2014-12-24 12:47:09
+  duration: 1

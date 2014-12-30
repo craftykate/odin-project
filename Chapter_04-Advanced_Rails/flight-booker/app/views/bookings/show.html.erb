@@ -1,0 +1,18 @@
+<form>
+	<h2>Flight Confirmation:</h2>
+	<p>
+		<strong>Flight #:</strong> <%= @booking.flight_id %><br/>
+		<strong>From:</strong> <%= @booking.flight.from_airport.name %><br/>
+		<strong>To:</strong> <%= @booking.flight.to_airport.name %><br/>
+		<strong>Date:</strong> <%= @booking.flight.start_time.strftime("%a %b %d, %Y") %><br/>
+		<strong>Time:</strong> <%= @booking.flight.start_time.strftime("%I:%M %p") %>
+	</p>
+	<hr/>
+	<% @booking.passengers.each_with_index do |p, i| %>
+		<p>
+			<strong>Passenger <%= i + 1 %>:</strong><br/>
+			<strong>Name:</strong> <%= p.name %><br/>
+			<strong>Email:</strong> <%= p.email %><br/>
+		</p>
+	<% end %>
+</form>

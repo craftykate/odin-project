@@ -1,0 +1,57 @@
+<%= form_tag(flights_path, method: :get) do %>
+	<%= hidden_field_tag :search %>
+	<h2>Search Flights</h2>
+	
+	<%= select_tag(:from, options_for_select(@airports, @chosen_from), prompt: "From") %>
+
+	<%= select_tag(:to, options_for_select(@airports, @chosen_to), prompt: "To") %>
+
+	<%= select_tag(:passenger_count, options_for_select([1,2,3,4], @chosen_pass), prompt: "Passengers") %>
+
+	<%= select_tag(:chosen_date, options_for_select(@dates, @chosen_date), prompt: "Date") %>
+
+	<div class="submit">
+		<%= submit_tag("Find Flights") %>
+	</div>
+
+	<% if params[:search] && @message != ""%>
+		<br/><%= @message %>
+		<% @message = "" %>
+	<% end %>
+<% end %>
+
+<% if !@flights.none? && @message == ""%>
+	<%= form_tag new_booking_path,  method: :get do %>
+		<%= hidden_field_tag :passengers, params[:passenger_count] %>
+		<h2>Pick a flight</h2>
+		<table>
+			<thead>
+				<tr>
+					<th width = "40"></th>
+					<th width = "50">Flight</th>
+					<th width = "150">Date</th>
+					<th width = "85">Time</th>
+					<th width = "50">From</th>
+					<th width = "50">To</th>
+					<th width = "90">Duration</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @flights.each do |flight| %>
+					<tr>
+						<td><%= radio_button_tag :flight_id, flight.id %></td>
+						<td><%= flight.id %></td>
+						<td><%= flight.start_time.strftime("%a %m/%d/%y") %></td>
+						<td><%= flight.start_time.strftime("%I:%M %p") %></td>
+						<td><%= flight.from_airport.name %></td>
+						<td><%= flight.to_airport.name %></td>
+						<td><%= flight.duration/60 %> hours</td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+		<div class="submit">
+			<%= submit_tag("Select Flight") %>
+		</div>
+	<% end %>
+<% end %>
