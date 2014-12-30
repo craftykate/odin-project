@@ -14,3 +14,5 @@
     - Build a basic replica of Eventbrite where users can log in, create events and sign up to attend events
 - [Flight Booker](https://github.com/craftykate/odin-project/tree/master/Chapter_04-Advanced_Rails/flight-booker)
   - Build a basic flight booker app. Search flights by airport and date and book a flight
+- [Kittens API](https://github.com/craftykate/odin-project/tree/master/Chapter_04-Advanced_Rails/kittens-api)
+  - Build a data-producing API
