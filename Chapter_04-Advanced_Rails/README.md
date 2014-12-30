@@ -16,3 +16,5 @@
   - Build a basic flight booker app. Search flights by airport and date and book a flight
 - [Kittens API](https://github.com/craftykate/odin-project/tree/master/Chapter_04-Advanced_Rails/kittens-api)
   - Build a data-producing API
+- [Flickr API](https://github.com/craftykate/odin-project/tree/master/Chapter_04-Advanced_Rails/flickr-api)
+  - Build a program that communicates with Flickr's API to display Flickr photos by user
