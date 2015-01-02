@@ -1,0 +1,13 @@
+Your Flight has been booked
+
+Flight #: <%= @booking.flight_id %>
+From: <%= @booking.flight.from_airport.name %>
+To: <%= @booking.flight.to_airport.name %>
+Date: <%= @booking.flight.start_time.strftime("%a %b %d, %Y") %>
+Time: <%= @booking.flight.start_time.strftime("%I:%M %p") %>
+
+<% @booking.passengers.each_with_index do |p, i| %>
+	Passenger <%= i + 1 %>:
+		Name: <%= p.name %>
+		Email: <%= p.email %>
+<% end %>
