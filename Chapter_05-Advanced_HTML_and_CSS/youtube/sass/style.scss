@@ -1,0 +1,216 @@
+@import 'reset'; //Resets styles to be uniform across browsers
+
+//*============DEFINE COLORS============*/
+	$text: #545252;
+
+//*============END DEFINE COLORS============*/
+
+
+//*============TEXT STYLING============*/
+	//Sets text by type
+	//ex: @include setfont(menu); for menu text
+	//MUST add each font to head.php like this: 
+	//		<!--Quicksand - text-->
+	//		<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+	@mixin setfont($type) {
+		@if $type == text {
+			font: {
+				family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+				size: 1em;
+			}
+		}
+	}	
+
+	body {
+		@include setfont(text);
+		color: $text;
+	}	
+
+	p, ul {
+	}	
+
+	p {
+	}	
+
+	a, a:visited {
+		&:hover, &:focus, &:active {
+		}
+	}	
+
+	i, em {
+		font-style:italic;
+	}	
+
+	strong {
+		font-weight:bold;
+	}	
+//*============END TEXT STYLING============*/
+
+
+//*============MAIN PAGE ELEMENTS============*/
+	body {
+		position:relative; 
+		margin: 0 auto;
+		background-color: rgb(237,237,237);
+	}	
+
+	#wrapper {
+		width: 1060px;
+		margin: 0 auto;
+	}
+
+	.clear {
+		clear:both;
+	}
+//*============END MAIN PAGE ELEMENTS============*/
+
+//*============HEADER============*/
+	header {
+		background-color: white;
+		border-bottom: 1px solid rgb(226,226,226);
+		position: fixed;
+		width: 100%;
+		top: 0;
+		z-index: 4;
+		#logo {
+			height: 33px;
+			margin: 7px 0 8px 27px;
+		}
+		#menu {
+			position: relative;
+			height: 30px;
+			top: -8px;
+			margin-bottom: 0;
+		}
+		input {
+			width: 570px;
+			height: 23px;
+			position: relative;
+			top: -17px;
+			left: 65px;
+			margin-bottom: -15px;
+		}
+		#search {
+			position: relative;
+			left: 64px;
+			width: 20px;
+			top: -7px;
+			border: 1px solid rgb(226,226,226);
+			padding: 3px 20px 4px 20px;
+			background-color: rgb(246,246,246);
+		}
+		ul {
+			display: inline;
+			position: relative;
+			top: -17px;
+			left: 100px;
+			font-size: 12px;
+			font-weight: bold;
+			li {
+				display: inline;
+				padding: 6px 13px;
+				border: 1px solid rgb(226,226,226);
+				&:first-child {
+					background-color: rgb(246,246,246);
+					margin-right: 10px;
+				}
+				&:last-child {
+					background-color: rgb(24,111,193);
+					color: white;
+				}
+			}
+		}
+	}
+//*============END HEADER============*/
+
+//*============CONTENT============*/
+	#content {
+		width: 650px;
+		font-family: arial;
+		color: black;
+		float: left;
+		z-index: 1;
+		top: 50px;
+		position: relative;
+		margin-bottom: 90px;
+		#video {
+			position: relative;
+			width: 650px;
+			height: 390px;
+			margin-top: 10px;
+		}
+		#video-info {
+			background-color: white;
+			margin-top: 10px;
+			padding: 10px;
+			h2 {
+				font-size: 24px;
+				font-weight: normal;
+			}
+		}
+		#video-description {
+			background-color: white;
+			margin-top: 10px;
+			padding: 10px;
+			h2 {
+				font-weight: bold;
+				margin-bottom: 10px;
+			}
+			p {
+				margin-bottom: 20px;
+			}
+			hr {
+				border: 1px solid lighten(gray, 40%);
+			}
+			a {
+				display: block;
+				margin: 0 auto;
+				text-align: center;
+				text-decoration: none;
+				color: darken(gray, 5%);
+				font-weight: bold;
+			}
+		}
+		#comments {
+			background-color: white;
+			margin-top: 10px;
+			padding: 10px;
+			margin-bottom: 60px;
+			h2 {
+				color: darken(gray, 5%);
+				font-weight: bold;
+				margin-bottom: 10px;
+				margin-top: 10px;
+			}
+			a {
+				display: block;
+				width: 90%;
+				text-align: center;
+				color: darken(gray, 5%);
+				font-weight: bold;
+				text-decoration: none;
+				background-color: rgb(246,246,246);
+				border: 1px solid rgb(226,226,226);
+				padding: 10px 0;
+				margin: 20px auto;
+			}
+		}
+	}
+//*============END CONTENT============*/
+
+//*============SIDEBAR============*/
+	#sidebar {
+		margin-top: 10px;
+		margin-left: 10px;
+		float:left;
+		width: 400px;
+		background-color: white;
+		position: relative;
+		top: 50px;
+	}
+//*============END SIDEBAR============*/
+
+//*============RESPONSIVE DESIGN CHANGES============*/
+
+	//*----------max-width XXXXpx----------*/
+//*============END RESPONSIVE DESIGN CHANGES============*/
