@@ -70,3 +70,7 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 	- Build a data-producing API
 - [Flickr API](https://github.com/craftykate/odin-project/tree/master/Chapter_04-Advanced_Rails/flickr-api)
 	- Build a program that communicates with Flickr's API to display Flickr photos by user
+
+### Chapter 05 - Advanced HTML and CSS
+
+- [Recreate YouTube](https://github.com/craftykate/odin-project/tree/master/Chapter_05-Advanced_HTML_and_CSS/youtube)
