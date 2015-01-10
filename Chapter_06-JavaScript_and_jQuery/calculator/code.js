@@ -1,10 +1,12 @@
 // Activate "clear tape" link
-$("#tape p.clear").click(function() {
+$("#tape p.clear").click(function () {
     $("#tape p.tape").html("");
 });
 
 // Set height of tape to height of calculator
-$("#tape").css({'height':($(".calculator").height()+'px')});
+$("#tape").css({
+    'height': ($(".calculator").height() + 'px')
+});
 
 // Reset variables 
 var num1 = [],
@@ -16,9 +18,10 @@ var num1 = [],
     objDiv = null;
 
 // When a key is pressed 
-$(".keys").click(function() {
+$(".keys").click(function () {
+    $(".operator").removeClass("active");
     var input = $(this).html();
-    
+
     // If it's a number 
     if ($(this).hasClass("num")) {
         if (current === 1 || current === null) {
@@ -48,10 +51,11 @@ $(".keys").click(function() {
             removeClear();
         }
     }
-    
+
     // If it's an operator 
     if ($(this).hasClass("operator")) {
         if (num1 !== null) {
+            $(this).addClass("active");
             if (current === 0) {
                 operator = input;
             }
@@ -81,14 +85,14 @@ $(".keys").click(function() {
             }
         }
     }
-    
+
     // If it's the equals sign 
     if ($(this).hasClass("equals")) {
         if (num1 !== []) {
             calcResult();
         }
     }
-    
+
     // If it's the clear button 
     if ($(this).hasClass("clear")) {
         if ($(this).hasClass("all")) {
@@ -106,7 +110,7 @@ $(".keys").click(function() {
             }
         }
     }
-    
+
     // If it's the plus/minus button
     if ($(this).hasClass("pm")) {
         if (current === 1 || current === 3) {
@@ -118,7 +122,7 @@ $(".keys").click(function() {
             $(".result").html(num2.join(''));
         }
     }
-    
+
     // If it's the percent button 
     if ($(this).hasClass("percent")) {
         if (current === 1 || current === 3) {
@@ -130,19 +134,19 @@ $(".keys").click(function() {
             $(".result").html(num2.join(''));
         }
     }
-    
+
     if ($(this).hasClass("madd")) {
         memnum = (memnum === null) ? +$(".result").text() : memnum + +$(".result").text();
         $(".memory").html("m = " + memnum);
     }
-    
+
     if ($(this).hasClass("msub")) {
         if (memnum !== null) {
             memnum = memnum - +$(".result").text();
             $(".memory").html("m = " + memnum);
         }
     }
-    
+
     if ($(this).hasClass("mrec")) {
         if (memnum !== null) {
             $(".result").html(memnum);
@@ -154,7 +158,7 @@ $(".keys").click(function() {
             }
         }
     }
-    
+
     if ($(this).hasClass("mclr")) {
         memnum = null;
         $('.memory').html("");
@@ -166,6 +170,7 @@ function removeClear() {
     $(".calculator .clear").removeClass("all");
     $(".calculator .clear").html("C");
 }
+
 function addClear() {
     $(".calculator .clear").addClass("all");
     $(".calculator .clear").html("AC");
@@ -177,7 +182,7 @@ function calcResult() {
     if (operator !== null) {
         if (num2 !== []) {
             n2 = +num2.join('');
-        }  else {
+        } else {
             n2 = n1;
         }
         switch (operator) {
@@ -220,6 +225,6 @@ function clear() {
     $(".result").html(0);
     $("#tape p.tape").append("<hr>");
     objDiv = document.getElementById("tape");
-objDiv.scrollTop = objDiv.scrollHeight;
+    objDiv.scrollTop = objDiv.scrollHeight;
     addClear();
 }

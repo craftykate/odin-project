@@ -115,66 +115,70 @@ table.calculator tr.top-row-2 td:last-child, table.calculator td:last-child {
 table.calculator tr.top-row-2 td:last-child:active, table.calculator td:last-child:active {
   background-color: #cc8400;
 }
-/* line 110, ../sass/style.scss */
+/* line 108, ../sass/style.scss */
+table.calculator tr.top-row-2 td:last-child.active, table.calculator td:last-child.active {
+  background-color: #cc8400;
+}
+/* line 113, ../sass/style.scss */
 table.calculator tr:last-child td:first-child {
   border-bottom-left-radius: 10px;
   padding-left: 19.23077px;
   text-align: left;
 }
-/* line 115, ../sass/style.scss */
+/* line 118, ../sass/style.scss */
 table.calculator tr:last-child td:last-child {
   border-bottom-right-radius: 10px;
 }
-/* line 119, ../sass/style.scss */
+/* line 122, ../sass/style.scss */
 table.calculator tr.top-row td {
   background-color: #A99BC7;
   color: white;
 }
-/* line 122, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
 table.calculator tr.top-row td:active {
   background-color: #8d7ab5;
 }
 
-/* line 128, ../sass/style.scss */
+/* line 131, ../sass/style.scss */
 #wrapper {
   width: 380px;
   margin: 20px auto;
 }
-/* line 131, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 #wrapper:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 138, ../sass/style.scss */
+/* line 141, ../sass/style.scss */
 footer {
   position: relative;
   margin-top: 40px;
   border-top: 1px solid orange;
   clear: both;
 }
-/* line 143, ../sass/style.scss */
+/* line 146, ../sass/style.scss */
 footer ul {
   margin: 0;
   padding: 10px 0;
   text-align: center;
   background-color: #ffedcc;
 }
-/* line 148, ../sass/style.scss */
+/* line 151, ../sass/style.scss */
 footer ul li {
   display: inline;
 }
-/* line 150, ../sass/style.scss */
+/* line 153, ../sass/style.scss */
 footer ul li a {
   text-decoration: none;
   color: #A99BC7;
 }
-/* line 153, ../sass/style.scss */
+/* line 156, ../sass/style.scss */
 footer ul li a:hover {
   text-decoration: underline;
 }
-/* line 159, ../sass/style.scss */
+/* line 162, ../sass/style.scss */
 footer p {
   text-align: center;
 }

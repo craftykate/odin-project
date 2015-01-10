@@ -105,6 +105,9 @@ table.calculator {
         &:active {
             background-color: darken(orange, 10%);
         }
+        &.active {
+            background-color: darken(orange, 10%);
+        }
     }
     tr:last-child {
         td:first-child {
