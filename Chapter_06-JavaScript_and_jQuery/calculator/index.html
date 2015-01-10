@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="css/style.css" rel="stylesheet" >
+  <meta charset="utf-8" >
+	<title>Javascript Calculator</title>
+</head>
+<body>
+	<div id="wrapper">
+		<table class="calculator">
+			<caption class="memory"></caption>
+			<thead>
+				<tr>
+					<th colspan="4" class="result">0</th>
+				</tr>
+			</thead>
+			<tbody>
+					<tr class="top-row">
+					<td class="keys mclr">mc</td>
+					<td class="keys madd">m+</td>
+					<td class="keys msub">m-</td>
+					<td class="keys mrec">mr</td>
+				</tr>
+					<tr class="top-row-2">
+					<td class="keys clear all">AC</td>
+					<td class="keys pm">+/-</td>
+					<td class="keys percent">%</td>
+					<td class="keys operator">/</td>
+				</tr>
+				<tr>
+					<td class="keys num">7</td>
+					<td class="keys num">8</td>
+					<td class="keys num">9</td>
+					<td class="keys operator">*</td>
+				</tr>
+				<tr>
+					<td class="keys num">4</td>
+					<td class="keys num">5</td>
+					<td class="keys num">6</td>
+					<td class="keys operator">-</td>
+				</tr>
+				<tr>
+					<td class="keys num">1</td>
+					<td class="keys num">2</td>
+					<td class="keys num">3</td>
+					<td class="keys operator">+</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="keys num">0</td>
+					<td class="keys num">.</td>
+					<td class="keys equals">=</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div id="tape">
+			<h2>Tape</h2>
+			<p class="tape"></p>
+			<p class="clear">Clear Tape</p>
+		</div>
+	</div>
+<footer> 
+    <ul>
+        <li>built by <a href="http://katemcfaul.com">katemcfaul.com</a></li>
+    </ul>
+    <p>Style blatantly <em>(lovingly? admiringly?)</em> ripped off from the iPhone calculator. Because it's what I had next to me to refer to. Imitation is the sincerest form of flattery?</p>
+</footer>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="code.js"></script>
+</body>
+</html>

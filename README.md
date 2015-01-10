@@ -75,3 +75,9 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 
 - [Recreate YouTube](https://github.com/craftykate/odin-project/tree/master/Chapter_05-Advanced_HTML_and_CSS/youtube)
 	- A very basic mock up of the video page on YouTube
+
+### Chapter 06 - JavaScript and jQuery
+
+- [jQuery Calculator](https://github.com/craftykate/odin-project/tree/master/Chapter_06-JavaScript_and_jQuery/calculator)
+	- [Live Demo](http://jsfiddle.net/craftykate/k9ewcpvr/embedded/result/)
+	- Fully functional and full-featured jQuery calculator
