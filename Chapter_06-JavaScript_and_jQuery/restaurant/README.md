@@ -12,10 +12,14 @@ Navigating the tabbed content is also done with jQuery - everything is on one pa
 
 ![menu](https://github.com/craftykate/odin-project/blob/master/Chapter_06-JavaScript_and_jQuery/restaurant/img/site1.jpg)
 
+<hr>
+
 **Contact Page**
 
-![menu](https://github.com/craftykate/odin-project/blob/master/Chapter_06-JavaScript_and_jQuery/restaurant/img/site1.jpg)
+![menu](https://github.com/craftykate/odin-project/blob/master/Chapter_06-JavaScript_and_jQuery/restaurant/img/site2.jpg)
+
+<hr>
 
 **About Page**
 
-![menu](https://github.com/craftykate/odin-project/blob/master/Chapter_06-JavaScript_and_jQuery/restaurant/img/site1.jpg)
+![menu](https://github.com/craftykate/odin-project/blob/master/Chapter_06-JavaScript_and_jQuery/restaurant/img/site3.jpg)
