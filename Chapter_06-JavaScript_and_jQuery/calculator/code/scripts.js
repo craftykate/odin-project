@@ -148,13 +148,14 @@ $(document).ready(function() {
 
 		// If it's the percent button 
 		if ($(this).hasClass("percent")) {
+			var x = (+$(".result").text());
 			// Divide current number by 100
 			if (current === 1 || current === 3) {
-				num1 = [num1 / 100];
+				num1 = [x * 0.01];
 				$(".result").html(num1.join(''));
 			}
 			if (current === 2) {
-				num2 = [num2 / 100];
+				num2 = [x * 0.01];
 				$(".result").html(num2.join(''));
 			}
 		} // end percent
