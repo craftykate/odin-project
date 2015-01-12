@@ -19,7 +19,7 @@ You'll build a simple binary tree data structure from some arbitrary input and a
 	1. You can think of the dfs_rec method as a little robot that crawls down the tree, checking if a node is the correct node and spawning other little robots to keep searching the tree. No robot is allowed to turn on, though, until all the robots to its left have finished their task.
 	2. The method will need to take in both the target value and the current node to compare against.
 
-	## Knight's Travails
+## Knight's Travails
 
 [knight_moves](https://github.com/craftykate/odin-project/tree/master/Chapter_03-Advanced_Ruby/data_structures_and_algorithms/knight_moves.rb)
 
