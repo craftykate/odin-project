@@ -99,6 +99,7 @@ $(document).ready(function() {
 
 		// If it's the equals sign 
 		if ($(this).hasClass("equals")) {
+			$(".operator").removeClass("active");
 			// As long as there is a num1, calculate result
 			if (num1 !== []) {
 				calcResult();
@@ -183,9 +184,11 @@ $(document).ready(function() {
 				// Make current number equal memnum
 				if (current === 1 || current === 3) {
 					num1 = [memnum];
+					current = 1;
 				}
 				if (current === 2 || current === 0) {
 					num2 = [memnum];
+					current = 2;
 				}
 			}
 		}
