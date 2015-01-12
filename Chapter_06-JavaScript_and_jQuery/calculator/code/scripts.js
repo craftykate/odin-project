@@ -212,12 +212,13 @@ $(document).ready(function() {
 	// Calculate result 
 	function calcResult() {
 		var n1 = +num1.join('');
+		var n2 = null;
 		if (operator !== null) {
 			// If no value for num2, make num2 equal num1 ("3+" means 3+3)
-			if (num2 !== []) {
-				n2 = +num2.join('');
-			} else {
+			if (current === 0) {
 				n2 = n1;
+			} else {
+				n2 = +num2.join('');
 			}
 			switch (operator) {
 				case '+':
