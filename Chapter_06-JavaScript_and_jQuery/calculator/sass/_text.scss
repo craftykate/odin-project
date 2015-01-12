@@ -1,0 +1,113 @@
+//*============TEXT STYLING============*/
+	// Sets text by type
+	// ex: @include setfont(menu); for menu text
+	// MUST add each font to head.php like this: 
+	//		<!--Quicksand - text-->
+	//		<link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+	@mixin setfont($type) {
+		@if $type == text {
+			font: {
+				family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+				size: 1em;
+			}
+		}
+		// This is commented out in the html
+		// You'll have to uncomment it to use it
+		@if $type == banner {
+			font: {
+				family: 'Open Sans', sans-serif;
+				size: 1em;
+				weight: 700;
+			}
+		}
+		@if $type == code {
+			font: {
+				family: Courier, Monaco, monospace;
+				size: .9em;
+			}
+		}
+	}	
+
+	body {
+		@include setfont(text);
+		color: $text;
+	}	
+
+	ol {
+		margin: 10px 0 10px 40px;
+		line-height:120%;
+		list-style-type: decimal;
+		// Optional:
+		// text-align:justify;
+		li {
+			margin-bottom: 5px;
+			ol {
+				list-style-type: lower-roman;
+			}
+		}
+	}	
+
+	p {
+		margin-bottom: 1em;
+		line-height:120%;
+		text-align:justify;
+	}	
+
+	a {
+		color: $accent;
+		&:visited {
+		}
+		&:hover, &:focus, &:active {
+			color: $main;
+			text-decoration: underline;
+		}
+	}	
+
+	i, em {
+		font-style:italic;
+	}	
+
+	strong {
+		font-weight:bold;
+	}	
+
+	span.main {
+		color: $main;
+	}
+
+	span.accent {
+		color: $accent;
+	}
+
+	span.strike {
+		text-decoration: line-through;
+	}
+
+	pre {	
+		@include setfont(code);
+		margin: 10px 0;
+		padding: 10px;
+		white-space: pre-wrap;
+		white-space: -moz-pre-wrap;
+		white-space: -pre-wrap;
+		white-space: -o-pre-wrap;
+		word-wrap: break-word;
+		overflow: auto;
+		background-color: lighten(gray, 40%);
+		@include insetshadow(lighten(gray, 20%), 0, 0, 10px);
+		@include round;
+		//For rails development code
+		&.debug_dump {
+			margin: 40px 0 0 0;
+			padding: 20px;
+		}
+	}
+
+	span.code {
+		padding: 0 5px;
+		background-color: lighten(gray, 40%);
+		@include setfont(code);
+		@include round(5px);
+		@include insetshadow(rgba(0,0,0,.2), 0px, 0px, 4px, 0px)
+	}
+//*============END TEXT STYLING============*/

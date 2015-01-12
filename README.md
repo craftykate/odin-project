@@ -79,7 +79,7 @@ I'm going through the [Odin Project tutorial](http://www.theodinproject.com) on 
 ### Chapter 06 - JavaScript and jQuery
 
 - [jQuery Calculator](https://github.com/craftykate/odin-project/tree/master/Chapter_06-JavaScript_and_jQuery/calculator)
-	- [Live Demo](http://jsfiddle.net/craftykate/k9ewcpvr/embedded/result/)
+	- [Live JSFiddle Demo](http://jsfiddle.net/craftykate/k9ewcpvr/embedded/result/)
 	- Fully functional and full-featured jQuery calculator
 - [jQuery Restaurant Site](https://github.com/craftykate/odin-project/tree/master/Chapter_06-JavaScript_and_jQuery/restaurant)
 	- Build a dummy site for a restaurant where all content is populated with jQuery

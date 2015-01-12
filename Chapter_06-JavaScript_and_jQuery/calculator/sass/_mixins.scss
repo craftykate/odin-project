@@ -1,0 +1,35 @@
+//*============ MIXINS ============*/
+	// Rounds corners individually. Default set.
+	// ex: @include rounded; for default
+	// or ex: @include rounded(10px, 10px, 0, 0); for rounded top
+	@mixin rounded($tlcurve: 10px, $trcurve: 10px, $brcurve: 10px, $blcurve: 10px) {
+		border-top-left-radius: $tlcurve;
+		border-top-right-radius: $trcurve;
+		border-bottom-right-radius: $brcurve;
+		border-bottom-left-radius: $blcurve;
+	}
+
+	// Rounds all corners the same. Default set.
+	// ex: @include round; for default
+	// or ex: @include round(20px);
+	// or ex: @include round(50%); for a circle
+	@mixin round($curve: 10px) {
+		border-radius: $curve;
+	}
+	
+	// Applies boxshodow to element. Default set.
+	// ex: @include boxshadow; for default
+	// ex: @include boxshadow($main, 2px, 2px, 0px); to set each variable
+	@mixin boxshadow ($color: rgba(0,0,0,.3), $horshad: 0px, $vershad: 0px, $blurshad: 7px, $spreadshad: 1px) {
+		-webkit-box-shadow: $color $horshad $vershad $blurshad $spreadshad;
+		box-shadow: $color $horshad $vershad $blurshad $spreadshad;
+	}
+	
+	// Applies inset boxshodow to element. Default set.
+	// ex: @include insetshadow; for default
+	// ex: @include insetshadow($main, 2px, 2px, 0px); to set each variable
+	@mixin insetshadow ($color: rgba(0,0,0,.3), $horshad: 0px, $vershad: 0px, $blurshad: 7px, $spreadshad: 1px) {
+		-webkit-box-shadow: inset $color $horshad $vershad $blurshad $spreadshad;
+		box-shadow: inset $color $horshad $vershad $blurshad $spreadshad;
+	}
+//*============ END MIXINS ============*/

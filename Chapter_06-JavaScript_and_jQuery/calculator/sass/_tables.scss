@@ -1,0 +1,90 @@
+//*============ TABLES ============*/
+	table.calculator {
+		position: relative;
+		margin: 20px 0;
+		width: $calc-width;
+		float: right;
+		border-collapse: separate;
+		border-spacing: 0;
+		caption {
+			position: fixed;
+			color: white;
+			margin-top: -30px - $calc-quarter;
+			margin-left: 10px;
+			font-size: 80%;
+		}
+		th, td {
+			width: $calc-quarter;
+			height: $calc-quarter;
+			font-size: $calc-font;
+			vertical-align: middle;
+			&:not(.result) {
+				cursor: pointer;
+			}
+			&:active {
+				background-color: gray;
+			}
+		}
+		td {
+			border-bottom: 1px solid gray;
+			border-right: 1px solid gray;
+			text-align: center;
+			&:first-child {
+				border-left: 1px solid gray;
+			}
+		}
+		thead {
+			background-color: $text;
+			background: linear-gradient(lighten($text, 20%), $text);
+			color: white;
+			font-size: $calc-result-font;
+			text-align: right;
+			th.result {
+				padding: 30px 10px 20px 10px;
+				&:first-child {
+					border-top-left-radius: $calc-radius;
+				}
+				&:last-child {
+					border-top-right-radius: $calc-radius;
+				}
+			}
+		}
+		tbody {
+			tr.top-row td {
+				background-color: $accent;
+				color: white;
+				&:active {
+					background-color: darken($accent, 10%);
+				}
+			}
+			tr.top-row-2 td {
+				background-color: lighten(gray, 30%);
+				&:active {
+					background-color: gray;
+				}
+			}
+			tr.top-row-2 td:last-child, td:last-child {
+				background-color: $main;
+				color: white;
+				&:active, &.active {
+					background-color: darken($main, 10%);
+				}
+			}
+			td {
+				background-color: lighten(gray, 46%);
+			} 
+			tr:last-child {
+				td {
+					&:first-child {
+						border-bottom-left-radius: $calc-radius;
+						text-align: left;
+						padding-left: $calc-quarter/2.6;
+					}
+					&:last-child {
+						border-bottom-right-radius: $calc-radius;
+					}
+				}
+			}
+		}
+	}
+//*============ END TABLES ============*/
