@@ -48,102 +48,53 @@ table {
   box-sizing: border-box;
 }
 
-/* line 31, ../sass/_text.scss */
+/* line 16, ../sass/_text.scss */
 body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1em;
   color: #545252;
 }
 
-/* line 36, ../sass/_text.scss */
+/* line 21, ../sass/_text.scss */
 ol {
   margin: 10px 0 10px 40px;
   line-height: 120%;
   list-style-type: decimal;
 }
-/* line 42, ../sass/_text.scss */
+/* line 27, ../sass/_text.scss */
 ol li {
   margin-bottom: 5px;
 }
-/* line 44, ../sass/_text.scss */
+/* line 29, ../sass/_text.scss */
 ol li ol {
   list-style-type: lower-roman;
 }
 
-/* line 50, ../sass/_text.scss */
+/* line 35, ../sass/_text.scss */
 p {
   margin-bottom: 1em;
   line-height: 120%;
   text-align: justify;
 }
 
-/* line 56, ../sass/_text.scss */
+/* line 41, ../sass/_text.scss */
 a {
   color: #e5007a;
 }
-/* line 60, ../sass/_text.scss */
+/* line 45, ../sass/_text.scss */
 a:hover, a:focus, a:active {
-  color: #adb870;
+  color: #eb960e;
   text-decoration: underline;
 }
 
-/* line 66, ../sass/_text.scss */
+/* line 51, ../sass/_text.scss */
 i, em {
   font-style: italic;
 }
 
-/* line 70, ../sass/_text.scss */
+/* line 55, ../sass/_text.scss */
 strong {
   font-weight: bold;
-}
-
-/* line 74, ../sass/_text.scss */
-span.main {
-  color: #adb870;
-}
-
-/* line 78, ../sass/_text.scss */
-span.accent {
-  color: #e5007a;
-}
-
-/* line 82, ../sass/_text.scss */
-span.strike {
-  text-decoration: line-through;
-}
-
-/* line 86, ../sass/_text.scss */
-pre {
-  font-family: Courier, Monaco, monospace;
-  font-size: .9em;
-  margin: 10px 0;
-  padding: 10px;
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  word-wrap: break-word;
-  overflow: auto;
-  background-color: #e6e6e6;
-  -webkit-box-shadow: inset #b3b3b3 0 0 10px 1px;
-  box-shadow: inset #b3b3b3 0 0 10px 1px;
-  border-radius: 10px;
-}
-/* line 100, ../sass/_text.scss */
-pre.debug_dump {
-  margin: 40px 0 0 0;
-  padding: 20px;
-}
-
-/* line 106, ../sass/_text.scss */
-span.code {
-  padding: 0 5px;
-  background-color: #e6e6e6;
-  font-family: Courier, Monaco, monospace;
-  font-size: .9em;
-  border-radius: 5px;
-  -webkit-box-shadow: inset rgba(0, 0, 0, 0.2) 0px 0px 4px 0px;
-  box-shadow: inset rgba(0, 0, 0, 0.2) 0px 0px 4px 0px;
 }
 
 /* line 2, ../sass/_custom.scss */
@@ -200,7 +151,7 @@ header h1 {
 }
 /* line 46, ../sass/_custom.scss */
 header h1 a {
-  color: #adb870;
+  color: #eb960e;
   text-decoration: none;
 }
 /* line 49, ../sass/_custom.scss */
@@ -225,7 +176,7 @@ header ul li a {
 /* line 66, ../sass/_custom.scss */
 header ul li:not(:first-child)::before {
   content: " | ";
-  color: #adb870;
+  color: #eb960e;
 }
 
 /* line 77, ../sass/_custom.scss */
@@ -240,7 +191,7 @@ header ul li:not(:first-child)::before {
 }
 /* line 84, ../sass/_custom.scss */
 #content form h2 {
-  border-bottom: 1px solid #879349;
+  border-bottom: 1px solid #a3680a;
 }
 /* line 87, ../sass/_custom.scss */
 #content h3 {
@@ -252,7 +203,7 @@ header ul li:not(:first-child)::before {
 footer {
   min-width: 600px;
   padding: 15px;
-  background-color: #adb870;
+  background-color: #eb960e;
   color: white;
   clear: both;
 }
@@ -289,28 +240,36 @@ footer a, footer a:visited {
 #score p span {
   font-weight: normal;
 }
+/* line 10, ../sass/_snake.scss */
+#score p span.score {
+  color: #eb960e;
+}
 
-/* line 13, ../sass/_snake.scss */
+/* line 16, ../sass/_snake.scss */
 #high-scores {
   display: inline-block;
   width: 100px;
   float: left;
 }
+/* line 20, ../sass/_snake.scss */
+#high-scores h2 {
+  text-align: center;
+}
 
-/* line 18, ../sass/_snake.scss */
+/* line 24, ../sass/_snake.scss */
 #board {
   display: inline-block;
   margin: 5px auto;
   width: 602px;
   border: 1px solid black;
 }
-/* line 25, ../sass/_snake.scss */
+/* line 31, ../sass/_snake.scss */
 #board .row {
   display: block;
   margin: 0;
   height: 15px;
 }
-/* line 29, ../sass/_snake.scss */
+/* line 35, ../sass/_snake.scss */
 #board .row .cell {
   display: inline-block;
   margin: 0;
@@ -318,11 +277,21 @@ footer a, footer a:visited {
   height: 15px;
   border: 1px solid #cccccc;
 }
-/* line 35, ../sass/_snake.scss */
+/* line 41, ../sass/_snake.scss */
 #board .row .cell.food {
   background-color: red;
 }
-/* line 38, ../sass/_snake.scss */
+/* line 44, ../sass/_snake.scss */
 #board .row .cell.snake {
   background-color: green;
+}
+
+/* line 50, ../sass/_snake.scss */
+#instructions {
+  width: 600px;
+  margin: 10px 0 0 100px;
+}
+/* line 53, ../sass/_snake.scss */
+#instructions h2 {
+  margin-bottom: 10px;
 }

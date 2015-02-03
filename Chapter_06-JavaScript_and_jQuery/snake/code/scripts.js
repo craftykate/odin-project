@@ -51,8 +51,8 @@ var snakeGame = {
 	},
 
 	generateFood: function() {
-		var x = Math.floor(Math.random() * 40);
-		var y = Math.floor(Math.random() * 40);
+		var x = Math.floor(Math.random() * 38 + 1);
+		var y = Math.floor(Math.random() * 38 + 1);
 		$cell = this.findPostion(x, y);
 		$cell.addClass("food");
 		this.settings.foodPosition = [x, y];
