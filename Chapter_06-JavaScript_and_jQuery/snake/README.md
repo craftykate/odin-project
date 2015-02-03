@@ -2,7 +2,7 @@
 
 Project Source: http://www.theodinproject.com/javascript-and-jquery/jquery-and-the-dom
 
-[Live Demo](https://cdn.rawgit.com/craftykate/odin-project/master/Chapter_06-JavaScript_and_jQuery/snake/index.html)
+[Live Demo](https://rawgit.com/craftykate/odin-project/master/Chapter_06-JavaScript_and_jQuery/snake/index.html)
 
 ## Screenshot
 
