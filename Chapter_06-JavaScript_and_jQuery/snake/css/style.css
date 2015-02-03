@@ -275,7 +275,7 @@ footer a, footer a:visited {
   margin: 0;
   width: 15px;
   height: 15px;
-  border: 1px solid #cccccc;
+  border: 1px solid #cfcfcf;
 }
 /* line 41, ../sass/_snake.scss */
 #board .row .cell.food {
