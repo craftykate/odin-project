@@ -2,6 +2,8 @@
 
 Project Source: http://www.theodinproject.com/javascript-and-jquery/jquery-and-the-dom
 
+[Live Demo](https://cdn.rawgit.com/craftykate/odin-project/master/Chapter_06-JavaScript_and_jQuery/snake/index.html)
+
 ## Screenshot
 
 ![main page](https://github.com/craftykate/odin-project/blob/master/Chapter_06-JavaScript_and_jQuery/snake/img/snake.png)
