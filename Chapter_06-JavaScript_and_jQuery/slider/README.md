@@ -6,7 +6,7 @@ Project Source: http://www.theodinproject.com/javascript-and-jquery/creating-an-
 
 ## Screenshot
 
-![slider](https://github.com/craftykate/odin-project/blob/master/Chapter_06-JavaScript_and_jQuery/snake/img/slider.png)
+![slider](https://github.com/craftykate/odin-project/blob/master/Chapter_06-JavaScript_and_jQuery/slider/img/slider.png)
 
 ## Slider Features
 <h3>Easily Add Pictures</h3>
