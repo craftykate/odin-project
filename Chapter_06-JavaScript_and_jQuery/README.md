@@ -7,3 +7,7 @@
   - Build a dummy site for a restaurant where all content is populated with jQuery
 - [jQuery Snake Game](https://github.com/craftykate/odin-project/tree/master/Chapter_06-JavaScript_and_jQuery/snake)
   - Build the childhood favorite Snake with jQuery!
+- [jQuery Slider](https://github.com/craftykate/odin-project/tree/master/Chapter_06-JavaScript_and_jQuery/slider)
+  - Build a continuous image slider with jQuery
+
+
