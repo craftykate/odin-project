@@ -12,11 +12,13 @@ var snake = {
 
 function resetVariables() {
 	settings.foodPosition = [];
+	settings.waterPosition = [];
+	settings.goldPosition = [];
+	settings.ateFood = false;
 	settings.score = 0;
 	settings.level = 1;
 	settings.foodEaten = 0;
 	settings.timing = 150;
-	settings.ateFood = false;
 	snake.direction = [1,0];
 	snake.body = [[19,20]];
 }
@@ -59,6 +61,30 @@ function generateFood() {
 	var foodPosition = findPosition(x, y);
 	foodPosition.addClass("food");
 	settings.foodPosition = [x, y];
+}
+
+function generateWater() {
+	var x = Math.floor(Math.random() * 38 + 1);
+	var y = Math.floor(Math.random() * 38 + 1);
+	var waterPosition = findPosition(x, y);
+	waterPosition.addClass("water");
+	settings.waterPosition = [x, y];
+	setTimeout(function() {
+		$('.cell').removeClass("water");
+		settings.waterPosition = [];
+	}, 4000);
+}
+
+function generateGold() {
+	var x = Math.floor(Math.random() * 38 + 1);
+	var y = Math.floor(Math.random() * 38 + 1);
+	var goldPosition = findPosition(x, y);
+	goldPosition.addClass("gold");
+	settings.goldPosition = [x, y];
+	setTimeout(function() {
+		$('.cell').removeClass("gold");
+		settings.goldPosition = [];
+	}, 4000);
 }
 
 function moveSnake() {
@@ -117,12 +143,25 @@ function changeDirection(key) {
 	}
 }
 
-function updateScore() {
-	settings.foodEaten += 1;
-	settings.score += settings.level * 1;
-	if(settings.foodEaten % 5 === 0) {
-		settings.level += 1;
-		settings.timing *= 0.8;
+function updateScore(type) {
+	if(type === "food") {
+		settings.foodEaten += 1;
+		settings.score += settings.level;
+		if(settings.foodEaten % 5 === 0) {
+			settings.level += 1;
+			settings.timing *= 0.8;
+			if(settings.foodEaten % 10 === 0) {
+				generateWater();
+			}
+		}
+		if(settings.foodEaten % 13 === 0) {
+			generateGold();
+		}
+	} else if(type === "water") {
+		settings.score += settings.level * 2;
+	} else if(type === "gold") {
+		settings.timing *= 1.2;
+		settings.score += settings.level * 3;
 	}
 	$('#scores').find('.level').text(settings.level);
 	$('#scores').find('.score').text(settings.score);
@@ -130,13 +169,36 @@ function updateScore() {
 
 function checkIfFood() {
 	var headx = snake.body[0][0];
-	var foodx = settings.foodPosition[0];
 	var heady = snake.body[0][1];
+	var foodx = settings.foodPosition[0];
 	var foody = settings.foodPosition[1];
+	var waterx = settings.waterPosition[0];
+	var watery = settings.waterPosition[1];
+	var goldx = settings.goldPosition[0];
+	var goldy = settings.goldPosition[1];
+	var points;
 	if(headx === foodx && heady === foody)	{
 		generateFood();
-		updateScore();
-		return true;
+		updateScore("food");
+		return "food";
+	} else if(headx === waterx && heady === watery) {
+			updateScore("water");
+			$('.cell').removeClass("water");
+			settings.waterPosition = [];
+			points = settings.level * 2;
+			$('#awards').find('p').html('<span class="water">You got water!<br/>+' + points +' points</span>');
+			setTimeout(function() {
+				$('#awards').find('p').html("");
+			}, 3000);
+	} else if(headx === goldx && heady === goldy) {
+			updateScore("gold");
+			$('.cell').removeClass("gold");
+			settings.goldPosition = [];
+			points = settings.level * 3;
+			$('#awards').find('p').html('<span class="gold">You got gold!<br/>+' + points +' points</span>');
+			setTimeout(function() {
+				$('#awards').find('p').html("");
+			}, 3000);
 	} else {
 		return false;
 	}
@@ -148,9 +210,9 @@ function compareScores(a, b) {
 }
 
 function displayScores(response) {
-	var highScores = settings.scores;
-	highScores.push([settings.score, response]);
-	highScores.sort(compareScores);
+	settings.scores.push([settings.score, response]);
+	settings.scores.sort(compareScores);
+	var highScores = settings.scores.slice(0,10);
 	var highScoresDiv = $('#high-scores').find('ul');
 	highScoresDiv.html("");
 	var thisScore;
@@ -181,7 +243,8 @@ function playGame() {
 		var checkMove = checkPosition();
 		var response;
 		if(checkMove === "ok") {
-			if(checkIfFood()) {
+			var foodType = checkIfFood();
+			if(foodType === "food") {
 				settings.ateFood = true;
 			} else {
 				settings.ateFood = false;
@@ -208,16 +271,18 @@ function init() {
 }
 
 $(document).ready(function() {
-	createBoard();
-	init();
 
+	createBoard();
+	$('.start').show();
+	
 	$(document).on('keydown', function(event) {
 		var key = event.which;
 		event.preventDefault();
 		changeDirection(key);
 	});
 
-	$('.start').find('p').click(function() {
+	$('.start').find('.button').click(function() {
 		init();
 	});
+
 });
