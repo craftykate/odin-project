@@ -14,6 +14,7 @@ function resetVariables() {
 	settings.foodPosition = [];
 	settings.waterPosition = [];
 	settings.goldPosition = [];
+	settings.bombPosition = [];
 	settings.ateFood = false;
 	settings.score = 0;
 	settings.level = 1;
@@ -87,6 +88,25 @@ function generateGold() {
 	}, 4000);
 }
 
+function generateBomb() {
+	generateBombFunction = setInterval(function() {
+		var x = Math.floor(Math.random() * 38 + 1);
+		var y = Math.floor(Math.random() * 38 + 1);
+		while(x === settings.foodPosition[0] && y === settings.foodPosition[1]) {
+			x = Math.floor(Math.random() * 38 + 1);
+			y = Math.floor(Math.random() * 38 + 1);
+		}
+		var bombPosition = findPosition(x, y);
+		bombPosition.addClass("bomb");
+		settings.bombPosition = [x, y];
+		setTimeout(function() {
+			$('.cell').removeClass("bomb");
+			settings.bombPosition = [];
+		}, 10000);
+	}, 20000);
+}
+
+
 function moveSnake() {
 	var x = snake.body[0][0];
 	var y = snake.body[0][1];
@@ -112,6 +132,15 @@ function checkIfAteItself() {
 	}
 }
 
+function checkIfBomb() {
+	var snakeHead = [snake.body[0][0], snake.body[0][1]];
+	if(snakeHead[0] === settings.bombPosition[0] && snakeHead[1] === settings.bombPosition[1]) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
 function checkPosition() {
 	var snakex = snake.body[0][0];
 	var snakey = snake.body[0][1];
@@ -120,6 +149,8 @@ function checkPosition() {
 	} else {
 		if(checkIfAteItself()) {
 			return "ate";
+		} else if(checkIfBomb()) {
+			return "bomb";
 		} else {
 			return "ok";
 		}
@@ -234,6 +265,7 @@ function endGame(response) {
 	displayScores(response);
 	$('#scores').find('.score').text(settings.score);
 	$('#scores').find('.level').text(settings.level);
+	clearInterval(generateBombFunction);
 	$('.start').show();
 }
 
@@ -255,6 +287,8 @@ function playGame() {
 				response = window.prompt('You went off the board! Your score: ' + settings.score + '. What is your name?');
 			} else if(checkMove === "ate") {
 				response = window.prompt('You ate yourself! Your score: ' + settings.score + '. What is your name?');
+			} else if(checkMove === "bomb") {
+				response = window.prompt('You ate a bomb! Your score: ' + settings.score + '. What is your name?');
 			}
 			endGame(response);
 		}
@@ -266,6 +300,7 @@ function init() {
 	$('#scores').find('.score').text(settings.score);
 	$('#scores').find('.level').text(settings.level);
 	$('.start').hide();
+	generateBomb();
 	generateFood();
 	playGame();
 }
