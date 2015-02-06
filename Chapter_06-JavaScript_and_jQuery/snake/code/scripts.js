@@ -90,11 +90,11 @@ function generateGold() {
 
 function generateBomb() {
 	generateBombFunction = setInterval(function() {
-		var x = Math.floor(Math.random() * 38 + 1);
-		var y = Math.floor(Math.random() * 38 + 1);
+		var x = Math.floor(Math.random() * 40);
+		var y = Math.floor(Math.random() * 40);
 		while(x === settings.foodPosition[0] && y === settings.foodPosition[1]) {
-			x = Math.floor(Math.random() * 38 + 1);
-			y = Math.floor(Math.random() * 38 + 1);
+			x = Math.floor(Math.random() * 40);
+			y = Math.floor(Math.random() * 40);
 		}
 		var bombPosition = findPosition(x, y);
 		bombPosition.addClass("bomb");
@@ -296,6 +296,9 @@ function playGame() {
 }
 
 function init() {
+	$('.cell').removeClass("water");
+	$('.cell').removeClass("gold");
+	$('.cell').removeClass("bomb");
 	resetVariables();
 	$('#scores').find('.score').text(settings.score);
 	$('#scores').find('.level').text(settings.level);
