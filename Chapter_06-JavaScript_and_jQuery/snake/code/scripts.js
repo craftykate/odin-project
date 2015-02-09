@@ -20,6 +20,7 @@ function resetVariables() {
 	settings.level = 1;
 	settings.foodEaten = 0;
 	settings.timing = 150;
+	settings.bonusPoints = 0;
 	snake.direction = [1,0];
 	snake.body = [[19,20]];
 }
@@ -70,10 +71,14 @@ function generateWater() {
 	var waterPosition = findPosition(x, y);
 	waterPosition.addClass("water");
 	settings.waterPosition = [x, y];
-	setTimeout(function() {
+	removeWaterFunction = setTimeout(function() {
+		if($('.cell').hasClass("water")) {
+			settings.bonusPoints = 0;
+			updateBonus();
+		}
 		$('.cell').removeClass("water");
 		settings.waterPosition = [];
-	}, 4000);
+	}, 8000);
 }
 
 function generateGold() {
@@ -82,10 +87,14 @@ function generateGold() {
 	var goldPosition = findPosition(x, y);
 	goldPosition.addClass("gold");
 	settings.goldPosition = [x, y];
-	setTimeout(function() {
+	removeGoldFunction = setTimeout(function() {
+		if($('.cell').hasClass("gold")) {
+			settings.bonusPoints = 0;
+			updateBonus();
+		}
 		$('.cell').removeClass("gold");
 		settings.goldPosition = [];
-	}, 4000);
+	}, 8000);
 }
 
 function generateBomb() {
@@ -198,6 +207,18 @@ function updateScore(type) {
 	$('#scores').find('.score').text(settings.score);
 }
 
+function updateBonus() {
+	if(settings.bonusPoints === 4) {
+		settings.bonusPoints = 0;
+		var newSnakeLength = snake.body.length / 2;
+		snake.body = snake.body.slice(0, newSnakeLength);
+	}
+	$('#in-a-row').find('.gotit').removeClass("gotit");
+	for (var i = 1; i <= settings.bonusPoints; i++) {
+		$('#in-a-row').find('.' + i).addClass("gotit");
+	}
+}
+
 function checkIfFood() {
 	var headx = snake.body[0][0];
 	var heady = snake.body[0][1];
@@ -218,6 +239,8 @@ function checkIfFood() {
 			settings.waterPosition = [];
 			points = settings.level * 2;
 			$('#awards').find('p').html('<span class="water">You got water!<br/>+' + points +' points</span>');
+			settings.bonusPoints += 1;
+			updateBonus();
 			setTimeout(function() {
 				$('#awards').find('p').html("");
 			}, 3000);
@@ -227,6 +250,8 @@ function checkIfFood() {
 			settings.goldPosition = [];
 			points = settings.level * 3;
 			$('#awards').find('p').html('<span class="gold">You got gold!<br/>+' + points +' points</span>');
+			settings.bonusPoints += 1;
+			updateBonus();
 			setTimeout(function() {
 				$('#awards').find('p').html("");
 			}, 3000);
@@ -261,11 +286,24 @@ function displayScores(response) {
 	}
 }
 
+function explodeSnake() {
+	var snakeLength = snake.body.length - 1;
+	$('.cell').removeClass("snake");
+	for (var i = 0; i < snakeLength; i++) {
+		var x = Math.floor(Math.random() * 40);
+		var y = Math.floor(Math.random() * 40);
+		var snakePosition = findPosition(x, y);
+		snakePosition.addClass("snake");
+	}
+}
+
 function endGame(response) {
 	displayScores(response);
 	$('#scores').find('.score').text(settings.score);
 	$('#scores').find('.level').text(settings.level);
 	clearInterval(generateBombFunction);
+	clearTimeout(removeWaterFunction);
+	clearTimeout(removeGoldFunction);
 	$('.start').show();
 }
 
@@ -288,7 +326,8 @@ function playGame() {
 			} else if(checkMove === "ate") {
 				response = window.prompt('You ate yourself! Your score: ' + settings.score + '. What is your name?');
 			} else if(checkMove === "bomb") {
-				response = window.prompt('You ate a bomb! Your score: ' + settings.score + '. What is your name?');
+				explodeSnake();
+				response = window.prompt('You ate a bomb and exploded! Your score: ' + settings.score + '. What is your name?');
 			}
 			endGame(response);
 		}
@@ -299,6 +338,7 @@ function init() {
 	$('.cell').removeClass("water");
 	$('.cell').removeClass("gold");
 	$('.cell').removeClass("bomb");
+	$('#in-a-row').find('td').removeClass("gotit");
 	resetVariables();
 	$('#scores').find('.score').text(settings.score);
 	$('#scores').find('.level').text(settings.level);
