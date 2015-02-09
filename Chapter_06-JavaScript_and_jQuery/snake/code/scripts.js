@@ -78,7 +78,7 @@ function generateWater() {
 		}
 		$('.cell').removeClass("water");
 		settings.waterPosition = [];
-	}, 8000);
+	}, 4000);
 }
 
 function generateGold() {
@@ -94,7 +94,7 @@ function generateGold() {
 		}
 		$('.cell').removeClass("gold");
 		settings.goldPosition = [];
-	}, 8000);
+	}, 4000);
 }
 
 function generateBomb() {
@@ -114,7 +114,6 @@ function generateBomb() {
 		}, 10000);
 	}, 20000);
 }
-
 
 function moveSnake() {
 	var x = snake.body[0][0];
@@ -189,7 +188,7 @@ function updateScore(type) {
 		settings.score += settings.level;
 		if(settings.foodEaten % 5 === 0) {
 			settings.level += 1;
-			settings.timing *= 0.8;
+			settings.timing *= 0.85;
 			if(settings.foodEaten % 10 === 0) {
 				generateWater();
 			}
@@ -200,7 +199,7 @@ function updateScore(type) {
 	} else if(type === "water") {
 		settings.score += settings.level * 2;
 	} else if(type === "gold") {
-		settings.timing *= 1.2;
+		settings.timing *= 1.15;
 		settings.score += settings.level * 3;
 	}
 	$('#scores').find('.level').text(settings.level);
@@ -210,7 +209,7 @@ function updateScore(type) {
 function updateBonus() {
 	if(settings.bonusPoints === 4) {
 		settings.bonusPoints = 0;
-		var newSnakeLength = snake.body.length / 2;
+		var newSnakeLength = (snake.body.length / 2) - 1;
 		snake.body = snake.body.slice(0, newSnakeLength);
 	}
 	$('#in-a-row').find('.gotit').removeClass("gotit");
@@ -302,8 +301,12 @@ function endGame(response) {
 	$('#scores').find('.score').text(settings.score);
 	$('#scores').find('.level').text(settings.level);
 	clearInterval(generateBombFunction);
-	clearTimeout(removeWaterFunction);
-	clearTimeout(removeGoldFunction);
+	if($('.cell').hasClass("water")) {
+		clearTimeout(removeWaterFunction);
+	}
+	if($('.cell').hasClass("gold")) {
+		clearTimeout(removeGoldFunction);
+	}
 	$('.start').show();
 }
 
