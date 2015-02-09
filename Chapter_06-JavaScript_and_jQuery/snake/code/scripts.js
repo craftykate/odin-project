@@ -209,7 +209,7 @@ function updateScore(type) {
 function updateBonus() {
 	if(settings.bonusPoints === 4) {
 		settings.bonusPoints = 0;
-		var newSnakeLength = (snake.body.length / 2) - 1;
+		var newSnakeLength = snake.body.length * 0.6;
 		snake.body = snake.body.slice(0, newSnakeLength);
 	}
 	$('#in-a-row').find('.gotit').removeClass("gotit");
@@ -326,11 +326,14 @@ function playGame() {
 		} else {
 			if(checkMove === "off") {
 				response = window.prompt('You went off the board! Your score: ' + settings.score + '. What is your name?');
+				$('#awards').find('p').html('<span class="bomb">You fell off the board!</span>');
 			} else if(checkMove === "ate") {
 				response = window.prompt('You ate yourself! Your score: ' + settings.score + '. What is your name?');
+				$('#awards').find('p').html('<span class="bomb">You ate yourself!</span>');
 			} else if(checkMove === "bomb") {
 				explodeSnake();
 				response = window.prompt('You ate a bomb and exploded! Your score: ' + settings.score + '. What is your name?');
+				$('#awards').find('p').html('<span class="bomb">You ate a bomb and exploded. =(</span>');
 			}
 			endGame(response);
 		}
@@ -345,6 +348,7 @@ function init() {
 	resetVariables();
 	$('#scores').find('.score').text(settings.score);
 	$('#scores').find('.level').text(settings.level);
+	$('#awards').find('p').html("");
 	$('.start').hide();
 	generateBomb();
 	generateFood();
@@ -362,7 +366,7 @@ $(document).ready(function() {
 		changeDirection(key);
 	});
 
-	$('.start').find('.button').click(function() {
+	$('.start').find('.start-game').click(function() {
 		init();
 	});
 
