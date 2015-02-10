@@ -209,12 +209,42 @@ function updateScore(type) {
 function updateBonus() {
 	if(settings.bonusPoints === 4) {
 		settings.bonusPoints = 0;
-		var newSnakeLength = snake.body.length * 0.6;
+		var newSnakeLength = Math.floor(snake.body.length * 0.6);
 		snake.body = snake.body.slice(0, newSnakeLength);
-	}
-	$('#in-a-row').find('.gotit').removeClass("gotit");
-	for (var i = 1; i <= settings.bonusPoints; i++) {
-		$('#in-a-row').find('.' + i).addClass("gotit");
+		$('#in-a-row').find('td').addClass("gotit");
+		$('#awards').find('p').append('<br/><span class="snake-head">You got four in a row!</span>');
+		setTimeout(function() {
+			$('#in-a-row').find('td').removeClass("gotit");
+		}, 200);
+		setTimeout(function() {
+			$('#in-a-row').find('td').addClass("gotit");
+		}, 400);
+		setTimeout(function() {
+			$('#in-a-row').find('td').removeClass("gotit");
+		}, 600);
+		setTimeout(function() {
+			$('#in-a-row').find('td').addClass("gotit");
+		}, 800);
+		setTimeout(function() {
+			$('#in-a-row').find('td').removeClass("gotit");
+		}, 1000);
+		setTimeout(function() {
+			$('#in-a-row').find('td').addClass("gotit");
+		}, 1200);
+		setTimeout(function() {
+			$('#in-a-row').find('td').removeClass("gotit");
+		}, 1400);
+		setTimeout(function() {
+			$('#in-a-row').find('td').addClass("gotit");
+		}, 1600);
+		setTimeout(function() {
+			$('#in-a-row').find('td').removeClass("gotit");
+		}, 1800);
+	} else {
+		$('#in-a-row').find('.gotit').removeClass("gotit");
+		for (var i = 1; i <= settings.bonusPoints; i++) {
+			$('#in-a-row').find('.' + i).addClass("gotit");
+		}
 	}
 }
 
@@ -242,7 +272,7 @@ function checkIfFood() {
 			updateBonus();
 			setTimeout(function() {
 				$('#awards').find('p').html("");
-			}, 3000);
+			}, 4000);
 	} else if(headx === goldx && heady === goldy) {
 			updateScore("gold");
 			$('.cell').removeClass("gold");
@@ -253,7 +283,7 @@ function checkIfFood() {
 			updateBonus();
 			setTimeout(function() {
 				$('#awards').find('p').html("");
-			}, 3000);
+			}, 4000);
 	} else {
 		return false;
 	}
@@ -326,14 +356,14 @@ function playGame() {
 		} else {
 			if(checkMove === "off") {
 				response = window.prompt('You went off the board! Your score: ' + settings.score + '. What is your name?');
-				$('#awards').find('p').html('<span class="bomb">You fell off the board!</span>');
+				$('#awards').find('p').html('You fell off the board!');
 			} else if(checkMove === "ate") {
 				response = window.prompt('You ate yourself! Your score: ' + settings.score + '. What is your name?');
-				$('#awards').find('p').html('<span class="bomb">You ate yourself!</span>');
+				$('#awards').find('p').html('You ate yourself!');
 			} else if(checkMove === "bomb") {
 				explodeSnake();
 				response = window.prompt('You ate a bomb and exploded! Your score: ' + settings.score + '. What is your name?');
-				$('#awards').find('p').html('<span class="bomb">You ate a bomb and exploded. =(</span>');
+				$('#awards').find('p').html('You ate a bomb and exploded. =(');
 			}
 			endGame(response);
 		}
