@@ -2,7 +2,7 @@
 
 Project Source: http://www.theodinproject.com/javascript-and-jquery/jquery-and-the-dom
 
-[Play Live](http://katemcfaul.com/snake/)
+[Play Live](http://kates-snake-game.surge.sh)
 
 ## Screenshot
 
@@ -18,7 +18,7 @@ Snake is green. Food is red. Eat the food. But don't eat yourself or go off the 
 
 ### Level Up!
 
-Every 5 pieces of food you eat advances you to the next level. Each new level gives you more points for each piece of food and the snake goes even faster. Can you keep up?? 
+Every 5 pieces of food you eat advances you to the next level. Each new level gives you more points for each piece of food and the snake goes even faster. Can you keep up??
 
 ### Bonus Points
 
@@ -29,4 +29,3 @@ If you're extra special you'll get GOLD. Get that gold! It's worth TRIPLE points
 ### High Scores
 
 Enter your name to play against your friends. Top 10 scores will be displayed in the sidebar.
-
